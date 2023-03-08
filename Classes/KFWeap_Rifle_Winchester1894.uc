@@ -7,6 +7,7 @@
 // Copyright (C) 2015 Tripwire Interactive LLC
 //=============================================================================
 class KFWeap_Rifle_Winchester1894 extends KFWeap_RifleBase;
+
 var float ReloadspeedMod;
 
 simulated function float GetReloadRateScale()
@@ -16,14 +17,14 @@ simulated function float GetReloadRateScale()
 
 simulated event SetWeapon()
 {
-    super(KFWeapon).SetWeapon();
+	super(KFWeapon).SetWeapon();
 
-    if(GetPerk().class == class'KFPerk_Sharpshooter')
-    {
-    	EquipTime = 0.25f;
-    	PutDownTime = 0.25f;
-    	ReloadspeedMod = 0.85f;
-    }
+	if(GetPerk().class == class'KFPerk_Sharpshooter')
+	{
+		EquipTime = 0.25f;
+		PutDownTime = 0.25f;
+		ReloadspeedMod = 0.85f;
+	}
 }
 
 function bool DenyPickupQuery(class<Inventory> ItemClass, Actor Pickup)
@@ -35,17 +36,18 @@ DefaultProperties
 {
 	DroppedPickupClass=class'Custom_KFDroppedPickup'
 	ReloadspeedMod = 1.0;
+
 	// Inventory / Grouping
 	InventorySize=4 //5
 	GroupPriority=25
 	WeaponSelectTexture=Texture2D'wep_ui_winchester_tex.UI_WeaponSelect_Winchester'
-   	AssociatedPerkClasses(0)=class'KFPerk_Sharpshooter'
-   	AssociatedPerkClasses(1)=class'KFPerk_Gunslinger'
+	AssociatedPerkClasses(0)=class'KFPerk_Sharpshooter'
+	AssociatedPerkClasses(1)=class'KFPerk_Gunslinger'
 
-    // FOV
-    MeshFOV=65
+	// FOV
+	MeshFOV=65
 	MeshIronSightFOV=45
-    PlayerIronSightFOV=65
+	PlayerIronSightFOV=65
 
 	// Depth of field
 	DOF_FG_FocalRadius=50

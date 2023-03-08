@@ -19,7 +19,7 @@ simulated event Tick(float DeltaTime)
 		{
 			maxRecoilPitch=default.maxRecoilPitch;
 			minRecoilPitch=default.minRecoilPitch;
-
+			
 			InterpValue = ZoomTime/default.ZoomOutTime;
 			ScopeLenseMIC.SetScalarParameterValue(InterpParamName, InterpValue);
 		}

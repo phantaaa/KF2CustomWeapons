@@ -12,7 +12,7 @@ class KFWeap_Revolver_DualRem1858 extends KFWeap_DualBase;
 
 function bool DenyPickupQuery(class<Inventory> ItemClass, Actor Pickup)
 {
-    return ItemClass == SingleClass || ItemClass == self.class;
+	return ItemClass == SingleClass || ItemClass == self.class;
 }
 
 DefaultProperties
@@ -47,7 +47,7 @@ DefaultProperties
 	// FOV
 	MeshFOV=60
 	MeshIronSightFOV=55
-    PlayerIronSightFOV=77
+	PlayerIronSightFOV=77
 
 	// Depth of field
 	DOF_FG_FocalRadius=40
@@ -125,11 +125,11 @@ DefaultProperties
 	// Custom anims
 	IdleFidgetAnims=(Guncheck_v1, Guncheck_v2, Guncheck_v3, Guncheck_v4)
 
-    bHasFireLastAnims=true
-    BonesToLockOnEmpty=(RW_Hammer)
-    BonesToLockOnEmpty_L=(LW_Hammer)
+	bHasFireLastAnims=true
+	BonesToLockOnEmpty=(RW_Hammer)
+	BonesToLockOnEmpty_L=(LW_Hammer)
 
-    // Revolver
+	// Revolver
 	bRevolver=true
 	CylinderRotInfo=(Inc=-60.0, Time=0.0875/*about 0.35 in the anim divided by ratescale of 4*/)
 	CylinderRotInfo_L=(Inc=-60.0, Time=0.0875/*about 0.35 in the anim divided by ratescale of 4*/)
@@ -333,4 +333,3 @@ DefaultProperties
 
 	WeaponUpgrades.Empty
 }
-

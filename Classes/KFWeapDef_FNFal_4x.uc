@@ -8,27 +8,26 @@ static function string GetItemName()
 
 static function string GetItemDescription()
 {
-     return "*FireRate: 606 -> 496rpm (757 to 620 with marksman)" $
-    "\n*Damage: 70 -> 75" $
-    "\n*ReloadSpeed: 110%" $
-    "\n*HorizontalRecoil:-165 to 190 -> -0 to 150 (only pulls to the right)" $
-    "\n*VerticalRecoil: 165-200 -> 240-240" $
-    "\n*Weight 8kg -> 9kg";
+  return "*FireRate: 606 -> 496rpm (757 to 620 with marksman)" $
+          "\n*Damage: 70 -> 75" $
+          "\n*ReloadSpeed: 110%" $
+          "\n*HorizontalRecoil:-165 to 190 -> -0 to 150 (only pulls to the right)" $
+          "\n*VerticalRecoil: 165-200 -> 240-240" $
+          "\n*Weight 8kg -> 9kg";
 }
 
 static function string GetItemLocalization(string KeyName)
 {
-    if(KeyName == "ItemName")
-    {
-        return GetItemName();
-    }
-    return Localize("KFWeap_AssaultRifle_FNFal", KeyName, "KFGameContent");
+  if(KeyName == "ItemName")
+  {
+    return GetItemName();
+  }
+  return Localize("KFWeap_AssaultRifle_FNFal", KeyName, "KFGameContent");
 }
 
 static function string GetItemCategory()
 {
-    return Localize("KFWeap_AssaultRifle_FNFal", "ItemCategory", "KFGameContent");
-
+  return Localize("KFWeap_AssaultRifle_FNFal", "ItemCategory", "KFGameContent");
 }
 
 DefaultProperties 

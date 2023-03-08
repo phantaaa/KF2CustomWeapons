@@ -8,7 +8,7 @@ DefaultProperties
 	KDeathUpKick=125
 	KDeathVel=75
 
-    KnockdownPower=20
+	KnockdownPower=20
 	StunPower=1 //90
 	StumblePower=1
 	GunHitPower=50
@@ -17,4 +17,3 @@ DefaultProperties
 	ModifierPerkList(0)=class'KFPerk_FieldMedic'
 	WeaponDef=class'CustomWeapons.KFWeapDef_HRGCrossbow'
 }
-

@@ -3,7 +3,7 @@ class KFWeapDef_Deagle extends KFWeaponDefinition
 	
 static function string GetItemName() 
 {
-    return Localize("KFWeap_Pistol_Deagle", "ItemName", "KFGameContent");
+  return Localize("KFWeap_Pistol_Deagle", "ItemName", "KFGameContent");
 }
 
 static function string GetItemDescription()
@@ -13,16 +13,16 @@ static function string GetItemDescription()
 
 static function string GetItemLocalization(string KeyName)
 {
-    if(KeyName == "ItemName")
-    {
-        return GetItemName();
-    }
-    return Localize("KFWeap_Pistol_Deagle", KeyName, "KFGameContent");
+  if(KeyName == "ItemName")
+  {
+    return GetItemName();
+  }
+  return Localize("KFWeap_Pistol_Deagle", KeyName, "KFGameContent");
 }
 
 static function string GetItemCategory()
 {
-    return Localize("KFWeap_Pistol_Deagle", "ItemCategory", "KFGameContent");
+  return Localize("KFWeap_Pistol_Deagle", "ItemCategory", "KFGameContent");
 }
 
 DefaultProperties

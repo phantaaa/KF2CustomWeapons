@@ -1,29 +1,28 @@
-
 class KFWeapDef_SW500 extends KFWeaponDefinition
 	abstract;
 
 static function string GetItemName()
 {
-    return Localize("KFWeap_Revolver_SW500", "ItemName", "KFGameContent");
+  return Localize("KFWeap_Revolver_SW500", "ItemName", "KFGameContent");
 }
 
 static function string GetItemLocalization(string KeyName)
 {
-    if(KeyName == "ItemName")
-    {
-        return GetItemName();
-    }
-    return Localize("KFWeap_Revolver_SW500", KeyName, "KFGameContent");
+  if(KeyName == "ItemName")
+  {
+    return GetItemName();
+  }
+  return Localize("KFWeap_Revolver_SW500", KeyName, "KFGameContent");
 }
 
 static function string GetItemCategory()
 {
-    return Localize("KFWeap_Revolver_SW500", "ItemCategory", "KFGameContent");
+  return Localize("KFWeap_Revolver_SW500", "ItemCategory", "KFGameContent");
 }
 
 static function string GetItemDescription()
 {
-    return Localize("KFWeap_Revolver_SW500", "ItemDescription", "KFGameContent");
+  return Localize("KFWeap_Revolver_SW500", "ItemDescription", "KFGameContent");
 }
 
 DefaultProperties

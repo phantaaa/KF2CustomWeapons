@@ -16,18 +16,19 @@ simulated event PostBeginPlay()
 	{
 		ReplaceSkins();
   }
-
 }
 
 private reliable client function ReplaceSkins()
 {
-    local SkinReplacement SR;
+	local SkinReplacement SR;
 
-    foreach ReplacementArray(SR)
-			class'KFGame.KFWeaponSkinList'.static.SaveWeaponSkin(SR.CustomWeapDef,SR.DefaultWeapon.default.SkinItemId);
+	foreach ReplacementArray(SR)
+	{
+		class'KFGame.KFWeaponSkinList'.static.SaveWeaponSkin(SR.CustomWeapDef,SR.DefaultWeapon.default.SkinItemId);
+	}
 
-   ReplacementArray.length = 0;
-   self.Destroy();
+	ReplacementArray.length = 0;
+	self.Destroy();
 }
 
 DefaultProperties

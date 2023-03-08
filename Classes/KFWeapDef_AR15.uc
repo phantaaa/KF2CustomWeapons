@@ -3,26 +3,26 @@ class KFWeapDef_AR15 extends KFWeaponDefinition
 
 static function string GetItemName()
 {
-    return Localize("KFWeap_AssaultRifle_AR15", "ItemName", "KFGameContent");
+  return Localize("KFWeap_AssaultRifle_AR15", "ItemName", "KFGameContent");
 }
 
 static function string GetItemLocalization(string KeyName)
 {
-    if(KeyName == "ItemName")
-    {
-        return GetItemName();
-    }
-    return Localize("KFWeap_AssaultRifle_AR15", KeyName, "KFGameContent");  
+  if(KeyName == "ItemName")
+  {
+    return GetItemName();
+  }
+  return Localize("KFWeap_AssaultRifle_AR15", KeyName, "KFGameContent");  
 }
 
 static function string GetItemCategory()
 {
-    return Localize("KFWeap_AssaultRifle_AR15", "ItemCategory", "KFGameContent");   
+  return Localize("KFWeap_AssaultRifle_AR15", "ItemCategory", "KFGameContent");   
 }
 
 static function string GetItemDescription()
 {
-    return Localize("KFWeap_AssaultRifle_AR15", "ItemDescription", "KFGameContent");
+  return Localize("KFWeap_AssaultRifle_AR15", "ItemDescription", "KFGameContent");
 }
 
 DefaultProperties

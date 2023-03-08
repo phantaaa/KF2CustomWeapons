@@ -3,27 +3,27 @@ class KFWeapDef_CenterfireMB464 extends KFWeaponDefinition
 
 static function string GetItemName()
 {
-    return Localize("KFWeap_Rifle_CenterfireMB464", "ItemName", "KFGameContent");
+  return Localize("KFWeap_Rifle_CenterfireMB464", "ItemName", "KFGameContent");
 }
 
 static function string GetItemCategory()
 {
-    return Localize("KFWeap_Rifle_CenterfireMB464", "ItemCategory", "KFGameContent");
+  return Localize("KFWeap_Rifle_CenterfireMB464", "ItemCategory", "KFGameContent");
 }
 
 static function string GetItemDescription()
 {
-    return "*Damage: 165 -> 180\n\n==== Sharpshooter ====" $
-    "\n*Reload speed: 0.80x (20\% faster)";
+  return "*Damage: 165 -> 180\n\n==== Sharpshooter ====" $
+          "\n*Reload speed: 0.80x (20\% faster)";
 }
 
 static function string GetItemLocalization(string KeyName)
 {
-    if(KeyName == "ItemName")
-    {
-        return GetItemName();
-    }
-    return Localize("KFWeap_Rifle_CenterfireMB464", KeyName, "KFGameContent");
+  if(KeyName == "ItemName")
+  {
+    return GetItemName();
+  }
+  return Localize("KFWeap_Rifle_CenterfireMB464", KeyName, "KFGameContent");
 }
 
 DefaultProperties

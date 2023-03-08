@@ -13,10 +13,10 @@ class KFWeap_Revolver_Rem1858 extends KFWeap_PistolBase;
 DefaultProperties
 {
 	DroppedPickupClass=class'Custom_KFDroppedPickup'
-    // FOV
+	// FOV
 	MeshFOV=60
 	MeshIronSightFOV=55
-    PlayerIronSightFOV=77
+	PlayerIronSightFOV=77
 
 	// Depth of field
 	DOF_FG_FocalRadius=40
@@ -38,7 +38,7 @@ DefaultProperties
 		AnimTreeTemplate=AnimTree'CHR_1P_Arms_ARCH.WEP_1stP_Dual_Animtree_Master_Revolver'
 	End Object
 
-   	// Zooming/Position
+	// Zooming/Position
 	IronSightPosition=(X=4,Y=0,Z=0)
 
 	// Ammo
@@ -214,6 +214,6 @@ DefaultProperties
 	End Object
 	Components.Add(BulletMeshComp5)
 	BulletMeshComponents.Add(BulletMeshComp5)
+
 	WeaponUpgrades.Empty
 }
-

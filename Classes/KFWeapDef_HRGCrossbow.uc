@@ -8,20 +8,20 @@ static function string GetItemName()
 
 static function string GetItemDescription()
 {
-    return "*40HP heal per dart(50ammo per dart)" $
-    "\n*12 Seconds full dart recharge" $
-    "\n*Dart dmg: 50" $
-    "\n*Dart projectile speed: Instant" $
-    "\n*No dart auto-track";
+  return "*40HP heal per dart(50ammo per dart)" $
+          "\n*12 Seconds full dart recharge" $
+          "\n*Dart dmg: 50" $
+          "\n*Dart projectile speed: Instant" $
+          "\n*No dart auto-track";
 }
 
 static function string GetItemLocalization(string KeyName)
 {
-    if(KeyName == "ItemName")
-    {
-        return GetItemName();
-    }
-    return Localize("KFWeap_Bow_Crossbow", KeyName, "KFGameContent");
+  if(KeyName == "ItemName")
+  {
+    return GetItemName();
+  }
+  return Localize("KFWeap_Bow_Crossbow", KeyName, "KFGameContent");
 }
 
 DefaultProperties
