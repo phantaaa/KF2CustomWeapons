@@ -80,7 +80,7 @@ DefaultProperties
 	WeaponFireTypes(DEFAULT_FIREMODE)=EWFT_InstantHit
 	WeaponProjectiles(DEFAULT_FIREMODE)=class'KFProj_Bullet_AssaultRifle'
 	InstantHitDamageTypes(DEFAULT_FIREMODE)=class'KFDT_Ballistic_FNFal'
-	FireInterval(DEFAULT_FIREMODE)=+0.131
+	FireInterval(DEFAULT_FIREMODE)=+0.121
 	PenetrationPower(DEFAULT_FIREMODE)=2.0
 	InstantHitDamage(DEFAULT_FIREMODE)=75.0
 	Spread(DEFAULT_FIREMODE)=0.007
@@ -91,7 +91,7 @@ DefaultProperties
 	WeaponFireTypes(ALTFIRE_FIREMODE)=EWFT_InstantHit
 	WeaponProjectiles(ALTFIRE_FIREMODE)=class'KFProj_Bullet_AssaultRifle'
 	InstantHitDamageTypes(ALTFIRE_FIREMODE)=class'KFDT_Ballistic_FNFal'
-	FireInterval(ALTFIRE_FIREMODE)=+0.131
+	FireInterval(ALTFIRE_FIREMODE)=+0.121
 	PenetrationPower(ALTFIRE_FIREMODE)=2.0
 	InstantHitDamage(ALTFIRE_FIREMODE)=75.0
 	Spread(ALTFIRE_FIREMODE)=0.007
