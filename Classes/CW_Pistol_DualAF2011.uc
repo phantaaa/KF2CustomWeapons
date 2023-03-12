@@ -1,7 +1,5 @@
 class CW_Pistol_DualAF2011 extends KFWeap_Pistol_DualAF2011;
 
-var vector BarrelOffset;
-
 simulated event SetWeapon()
 {
 	super.SetWeapon();

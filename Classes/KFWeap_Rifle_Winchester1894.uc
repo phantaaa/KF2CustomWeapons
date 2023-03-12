@@ -100,7 +100,7 @@ DefaultProperties
 	WeaponFireTypes(DEFAULT_FIREMODE)=EWFT_InstantHit
 	WeaponProjectiles(DEFAULT_FIREMODE)=class'KFProj_Bullet_Winchester1894'
 	InstantHitDamage(DEFAULT_FIREMODE)=80
-	InstantHitDamageTypes(DEFAULT_FIREMODE)=class'Custom_KFDT_Ballistic_Winchester'
+	InstantHitDamageTypes(DEFAULT_FIREMODE)=class'KFDT_Ballistic_Winchester'
 	FireInterval(DEFAULT_FIREMODE)=0.4 // 150 RPM
 	Spread(DEFAULT_FIREMODE)=0.007
 	PenetrationPower(DEFAULT_FIREMODE)=1.5

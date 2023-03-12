@@ -2,7 +2,6 @@ class Custom_KFDT_Ballistic_AF2011 extends KFDT_Ballistic_Handgun
 	abstract
 	hidedropdown;
 
-/** Allows the damage type to customize exactly which hit zones it can dismember */
 static simulated function bool CanDismemberHitZone( name InHitZoneName )
 {
 	if(super.CanDismemberHitZone(InHitZoneName))
