@@ -51,7 +51,7 @@ function HandleWeaponShotTaken( byte FireMode )
 
 function bool DenyPickupQuery(class<Inventory> ItemClass, Actor Pickup)
 {
-    return ItemClass == SingleClass || ItemClass == self.class;
+	return class<KFWeapon>(ItemClass).default.PackageKey == self.PackageKey;
 }
 
 DefaultProperties
