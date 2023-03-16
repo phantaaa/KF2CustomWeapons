@@ -7,11 +7,15 @@ simulated event Tick(float DeltaTime)
 
 	// Copy/paste modified from KFWeapon
 	if (LaserSight != None && bIsLaserSightEnabled)
+	{
 		LaserSight.Update(DeltaTime, Self);
+	}
 	
 	// Copy/paste modified from KFWeap_ScopedBase
 	if(ScopeLenseMIC == none)
+	{
 		return;
+	}
 
 	if(Instigator != none && Instigator.Controller != none && Instigator.IsHumanControlled())
 	{

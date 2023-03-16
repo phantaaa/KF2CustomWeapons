@@ -41,7 +41,7 @@ DefaultProperties
 
 	ScopeLenseMICTemplate =MaterialInstanceConstant'CustomScope.WEP_1P_FNFAL_Scope_MAT'
 
-    // FOV
+	// FOV
 	MeshFOV=55 //60
 	MeshIronSightFOV=20
   PlayerIronSightFOV=70

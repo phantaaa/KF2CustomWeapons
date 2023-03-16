@@ -8,9 +8,10 @@ simulated function AltFireMode()
 
 simulated function SpawnMedDart()
 {
-	if ( !HasAmmo(ALTFIRE_FIREMODE,AmmoCost[ALTFIRE_FIREMODE]) )
+	if (!HasAmmo(ALTFIRE_FIREMODE,AmmoCost[ALTFIRE_FIREMODE]))
+	{
 		return;
-
+	}
 	StartFire(ALTFIRE_FIREMODE);
 }
 
