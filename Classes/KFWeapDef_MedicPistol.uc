@@ -27,7 +27,7 @@ static function string GetItemDescription()
 
 DefaultProperties
 {
-	WeaponClassPath="CustomWeapons.CW_Pistol_Medic"
+	WeaponClassPath="CustomWeapons.KFWeap_Pistol_Medic"
 
 	BuyPrice=200
 	AmmoPricePerMag=10
