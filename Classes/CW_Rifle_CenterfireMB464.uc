@@ -1,5 +1,5 @@
 class CW_Rifle_CenterfireMB464 extends KFWeap_Rifle_CenterfireMB464;
-	
+
 var private float ReloadspeedMod;
 
 simulated function float GetReloadRateScale()
@@ -10,7 +10,7 @@ simulated function float GetReloadRateScale()
 simulated event SetWeapon()
 {
 	super.SetWeapon();
-
+	
 	if(GetPerk().class == class'KFPerk_Sharpshooter')
 	{
 		EquipTime = 0.25; // 0.45
@@ -29,20 +29,20 @@ DefaultProperties
 {
 	DroppedPickupClass=class'Custom_KFDroppedPickup'
 	ReloadspeedMod=1.0;
-
+	
 	// Inventory / Grouping
 	InventorySize=5
 	GroupPriority=54
-
+	
 	// Ammo
 	InitialSpareMags[0]=0
-
+	
 	// Recoil
 	maxRecoilPitch=500 // 500
 	minRecoilPitch=500 // 400
-
+	
 	// DEFAULT_FIREMODE
 	InstantHitDamage(DEFAULT_FIREMODE)=180
-
+	
 	WeaponUpgrades.Empty
 }

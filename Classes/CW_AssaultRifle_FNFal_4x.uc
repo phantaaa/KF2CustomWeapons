@@ -38,25 +38,25 @@ reliable client function ClientSetAltFire(bool bAltFire)
 DefaultProperties
 {
 	DroppedPickupClass=class'Custom_KFDroppedPickup'
-
+	
 	ScopeLenseMICTemplate =MaterialInstanceConstant'CustomScope.WEP_1P_FNFAL_Scope_MAT'
-
+	
 	// FOV
 	MeshFOV=55 //60
 	MeshIronSightFOV=20
-  PlayerIronSightFOV=70
-
+	PlayerIronSightFOV=70
+	
 	// Zooming/Position
 	PlayerViewOffset=(X=22.0,Y=11,Z=-3.0) //(X=22.0,Y=11,Z=-3.0)
 	IronSightPosition=(X=15,Y=0,Z=-0.01) //(X=7,Y=0,Z=0)
-
+	
 	// Inventory
 	InventorySize=9
 	GroupPriority=100
-
+	
 	// Ammo
 	InitialSpareMags[0]=0
-
+	
 	// Recoil
 	maxRecoilPitch=240 // 300
 	minRecoilPitch=240 // 300
@@ -73,7 +73,7 @@ DefaultProperties
 	RecoilISMinPitchLimit=65460
 	RecoilViewRotationScale=0.6
 	HippedRecoilModifier=1.4
-
+	
 	// DEFAULT_FIREMODE
 	FireModeIconPaths(DEFAULT_FIREMODE)=Texture2D'ui_firemodes_tex.UI_FireModeSelect_BulletAuto'
 	FiringStatesArray(DEFAULT_FIREMODE)=WeaponFiring
@@ -84,7 +84,7 @@ DefaultProperties
 	PenetrationPower(DEFAULT_FIREMODE)=2.0
 	InstantHitDamage(DEFAULT_FIREMODE)=75.0
 	Spread(DEFAULT_FIREMODE)=0.007
-
+	
 	// ALTFIRE_FIREMODE
 	FireModeIconPaths(ALTFIRE_FIREMODE)=Texture2D'ui_firemodes_tex.UI_FireModeSelect_BulletSingle'
 	FiringStatesArray(ALTFIRE_FIREMODE)=WeaponSingleFiring
@@ -95,14 +95,14 @@ DefaultProperties
 	PenetrationPower(ALTFIRE_FIREMODE)=2.0
 	InstantHitDamage(ALTFIRE_FIREMODE)=75.0
 	Spread(ALTFIRE_FIREMODE)=0.007
-
+	
 	// default to alt fire mode
 	bUseAltFireMode=true
-
+	
 	FireOffset=(X=30,Y=4.5,Z=-5)
-
+	
 	AssociatedPerkClasses.Empty
 	AssociatedPerkClasses(0)=class'KFPerk_Sharpshooter'
-
+	
 	WeaponUpgrades.Empty
 }

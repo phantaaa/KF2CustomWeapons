@@ -1,23 +1,23 @@
 class KFWeapDef_SW500Dual extends KFWeaponDefinition
-	abstract;
+abstract;
 
 static function string GetItemName()
 {
-  return Localize("KFWeap_Revolver_DualSW500", "ItemName", "KFGameContent");
+	return Localize("KFWeap_Revolver_DualSW500", "ItemName", "KFGameContent");
 }
 
 static function string GetItemLocalization(string KeyName)
 {
-  if(KeyName == "ItemName")
-  {
-    return GetItemName();
-  }
-  return Localize("KFWeap_Revolver_DualSW500", KeyName, "KFGameContent");
+	if(KeyName == "ItemName")
+	{
+		return GetItemName();
+	}
+	return Localize("KFWeap_Revolver_DualSW500", KeyName, "KFGameContent");
 }
 
 static function string GetItemCategory()
 {
-  return Localize("KFWeap_Revolver_DualSW500", "ItemCategory", "KFGameContent");
+	return Localize("KFWeap_Revolver_DualSW500", "ItemCategory", "KFGameContent");
 }
 
 static function string GetItemDescription()
@@ -28,10 +28,10 @@ static function string GetItemDescription()
 DefaultProperties
 {
 	WeaponClassPath="CustomWeapons.CW_Revolver_DualSW500"
-
+	
 	BuyPrice=1700
 	AmmoPricePerMag=50
 	ImagePath="WEP_UI_Dual_SW_500_TEX.UI_WeaponSelect_DualSW500"
-
+	
 	EffectiveRange=50
 }

@@ -18,9 +18,9 @@ function bool DenyPickupQuery(class<Inventory> ItemClass, Actor Pickup)
 simulated function AttachLaserSight()
 {
 	local bool bEnabled;
-
+	
 	super.AttachLaserSight();
-
+	
 	// Setup our laser sight on the client
 	if (bIsFromPickup)
 	{
@@ -36,7 +36,7 @@ simulated function AttachLaserSight()
 simulated function SetLaserSightEnabled(bool bEnabled, optional bool SendToServer = true)
 {
 	bIsLaserSightEnabled = bEnabled;
-
+	
 	if (WorldInfo.NetMode != NM_DedicatedServer)
 	{
 		if (LaserSight != None)
@@ -63,9 +63,9 @@ simulated function AltFireMode()
 	{
 		return;
 	}
-
+	
 	SetLaserSightEnabled(!bIsLaserSightEnabled);
-
+	
 	// Play switch fire mode sound for audio confirmation
 	Instigator.PlaySoundBase(KFInventoryManager(InvManager).SwitchFireModeEvent);
 }
@@ -74,20 +74,20 @@ simulated event Tick(float DeltaTime)
 {
 	local float InterpValue;
 	local float DefaultZoomInTime;
-
+	
 	// Copy/paste modified from KFWeapon
 	if (LaserSight != None && bIsLaserSightEnabled)
 	{
 		LaserSight.Update(DeltaTime, Self);
-	
+		
 	}
 	
 	// Copy/paste modified from KFWeap_ScopedBase
 	if(ScopeLenseMIC == none)
 	{
-		return;	
+		return;
 	}
-
+	
 	if(Instigator != none && Instigator.Controller != none && Instigator.IsHumanControlled())
 	{
 		if(bZoomingOut)
@@ -113,7 +113,7 @@ reliable server function ServerSetLaserSight(bool bEnabled)
 reliable client function ClientSetLaserSight(bool bEnabled)
 {
 	if (Role < ROLE_Authority)
-		SetLaserSightEnabled(bEnabled, false);
+	SetLaserSightEnabled(bEnabled, false);
 }
 
 /** Transfer laser sight setting to client */
@@ -128,19 +128,19 @@ DefaultProperties
 {
 	DroppedPickupClass=class'Custom_KFDroppedPickup'
 	bIsLaserSightEnabled=true
-
+	
 	EquipTime=0.20
 	PutDownTime=0.20
-
+	
 	// Ammo
 	InitialSpareMags[0]=0
 	bCanBeReloaded=true
 	bReloadFromMagazine=true
-
+	
 	// Recoil
 	maxRecoilPitch=225
 	minRecoilPitch=225 // 200
-
+	
 	// DEFAULT_FIREMODE
 	InstantHitDamage(DEFAULT_FIREMODE)=90.0 //80
 	

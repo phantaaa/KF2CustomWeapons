@@ -22,13 +22,13 @@ auto state Pickup
 		local vector HitLocation, HitNormal;
 		local TraceHitInfo HitInfo;
 		local bool bHitWall;
-
+		
 		// make sure its a live player
 		if (Other == None || !Other.bCanPickupInventory || !Other.IsAliveAndWell() || (Other.DrivenVehicle == None && Other.Controller == None))
 		{
 			return false;
 		}
-
+		
 		if (`TimeSince(CreationTime) < PickupDelay)
 		{
 			return false;
@@ -38,12 +38,12 @@ auto state Pickup
 		{
 			// If low on health, wait a little longer to allow pickup again
 			if( (bUseLowHealthDelay && (Instigator.Health / Instigator.HealthMax) <= 0.2f && `TimeSince(CreationTime) < 1.f)
-				|| `TimeSince(CreationTime) < 0.1f )
+			|| `TimeSince(CreationTime) < 0.1f )
 			{
 				return false;
 			}
 		}
-
+		
 		// make sure not touching through wall
 		foreach Other.TraceActors( class'Actor', HitA, HitLocation, HitNormal, MyCylinderComp.GetPosition() + vect(0,0,10), Other.Location, vect(1,1,1), HitInfo )
 		{
@@ -71,7 +71,7 @@ auto state Pickup
 				}
 			}
 		}
-
+		
 		// make sure game will let player pick me up
 		if (WorldInfo.Game.PickupQuery(Other, Inventory.class, self))
 		{
@@ -83,16 +83,16 @@ auto state Pickup
 		}
 		return false;
 	}
-
+	
 	function BeginState(Name PreviousStateName)
 	{
 		SetTimer(LifeSpan - 1, false);
 	}
-
+	
 	function CheckTouching()
 	{
 		local Pawn P;
-
+		
 		foreach TouchingActors(class'Pawn', P)
 		{
 			Touch( P, None, Location, vect(0,0,1) );

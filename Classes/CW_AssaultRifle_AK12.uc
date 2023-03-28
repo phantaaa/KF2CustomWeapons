@@ -32,20 +32,20 @@ reliable client function ClientSetAltFire(bool bAltFire)
 DefaultProperties
 {
 	DroppedPickupClass=class'Custom_KFDroppedPickup'
-
+	
 	// Ammo
 	InitialSpareMags[0]=0
 	
 	// Recoil
 	maxRecoilPitch=200
 	minRecoilPitch=200 //150
-
+	
 	// Inventory / Grouping
 	InventorySize=7
-
+	
 	// Damage
 	InstantHitDamage(DEFAULT_FIREMODE)=46.0 //40
 	InstantHitDamage(ALTFIRE_FIREMODE)=46.0 //40
-
+	
 	WeaponUpgrades.Empty
 }

@@ -20,7 +20,7 @@ function HandleWeaponShotTaken( byte FireMode )
 		{
 			KFPlayer.AddShotsFired(2);
 		}
-    else
+		else
 		{
 			KFPlayer.AddShotsFired(GetNumProjectilesToFire(FireMode));
 		}
@@ -45,7 +45,7 @@ DefaultProperties
 	DualClass=class'CustomWeapons.CW_Pistol_DualAF2011'
 	
 	BarrelOffset=(X=4.0,Y=0,Z=0) //10
-  
+	
 	// Ammo
 	InitialSpareMags[0]=0
 	
@@ -54,10 +54,10 @@ DefaultProperties
 	minRecoilPitch=650
 	maxRecoilYaw=225
 	minRecoilYaw=-225
-
+	
 	// DEFAULT_FIREMODE
 	WeaponFireTypes(DEFAULT_FIREMODE)= EWFT_InstantHit //EWFT_Projectile
 	InstantHitDamageTypes(DEFAULT_FIREMODE)=class'CustomWeapons.Custom_KFDT_Ballistic_AF2011'
-
+	
 	WeaponUpgrades.Empty
 }

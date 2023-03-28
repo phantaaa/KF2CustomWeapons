@@ -32,26 +32,26 @@ reliable client function ClientSetAltFire(bool bAltFire)
 DefaultProperties
 {
 	DroppedPickupClass=class'Custom_KFDroppedPickup'
-
+	
 	//Ammo
 	InitialSpareMags[0]=0
-
+	
 	// Recoil
 	maxRecoilPitch=115 //150
 	minRecoilPitch=115 //115
 	maxRecoilYaw=90 //115
 	minRecoilYaw=-90 // -115
 	RecoilRate=0.070 // 0.085
-
+	
 	// DEFAULT_FIREMODE
-	FireInterval(DEFAULT_FIREMODE)= 0.08571 //700   // +0.0909  660 RPM
+	FireInterval(DEFAULT_FIREMODE)= 0.08571 //700 // +0.0909 660 RPM
 	InstantHitDamage(DEFAULT_FIREMODE)=33.0 // vanilla -25// 30
 	Spread(DEFAULT_FIREMODE)=0.0065
-
+	
 	// ALT_FIREMODE
-	FireInterval(ALTFIRE_FIREMODE)= 0.08571 
+	FireInterval(ALTFIRE_FIREMODE)= 0.08571
 	InstantHitDamage(ALTFIRE_FIREMODE)=33.0 //25
 	Spread(ALTFIRE_FIREMODE)=0.0065
-
+	
 	WeaponUpgrades.Empty
 }

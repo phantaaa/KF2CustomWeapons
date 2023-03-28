@@ -4,18 +4,18 @@ var private SkinsAdder SkinsAdder;
 
 simulated event PostBeginPlay()
 {
-  super.PostBeginPlay();
-  SkinsAdder = Spawn(class'SkinsAdder');
+	super.PostBeginPlay();
+	SkinsAdder = Spawn(class'SkinsAdder');
 }
 
 simulated static final function bool RemovedDuplicateWeapon(Inventory CurrentWeapon, KFWeapon NewWeapon)
 {
-  if(KFWeapon(CurrentWeapon).PackageKey == NewWeapon.PackageKey)
-  {
-    CurrentWeapon.Instigator.ClientMessage("Don't buy same weapons!");
-    KFInventoryManager(CurrentWeapon.InvManager).ServerRemoveFromInventory(NewWeapon);
-    KFInventoryManager(CurrentWeapon.InvManager).ClientRemoveFromInventory(NewWeapon);
-    return true;
-  }
-  return false;
+	if(KFWeapon(CurrentWeapon).PackageKey == NewWeapon.PackageKey)
+	{
+		CurrentWeapon.Instigator.ClientMessage("Don't buy same weapons!");
+		KFInventoryManager(CurrentWeapon.InvManager).ServerRemoveFromInventory(NewWeapon);
+		KFInventoryManager(CurrentWeapon.InvManager).ClientRemoveFromInventory(NewWeapon);
+		return true;
+	}
+	return false;
 }

@@ -1,6 +1,6 @@
 class Custom_KFDT_Ballistic_AF2011 extends KFDT_Ballistic_Handgun
-	abstract
-	hidedropdown;
+abstract
+hidedropdown;
 
 static simulated function bool CanDismemberHitZone( name InHitZoneName )
 {
@@ -10,10 +10,10 @@ static simulated function bool CanDismemberHitZone( name InHitZoneName )
 	}
 	switch ( InHitZoneName )
 	{
-		case 'lupperarm':
-		case 'rupperarm':
-		case 'chest':
-		case 'heart':
+	case 'lupperarm':
+	case 'rupperarm':
+	case 'chest':
+	case 'heart':
 		return true;
 	}
 	return false;
@@ -22,13 +22,13 @@ static simulated function bool CanDismemberHitZone( name InHitZoneName )
 DefaultProperties
 {
 	KDamageImpulse=1500
-	KDeathUpKick=-450  
-	KDeathVel=200     
-
-	KnockdownPower=0 //15 
-	StumblePower=20 
-	GunHitPower=100 
-
+	KDeathUpKick=-450
+	KDeathVel=200
+	
+	KnockdownPower=0 //15
+	StumblePower=20
+	GunHitPower=100
+	
 	WeaponDef=class'CustomWeapons.KFWeapDef_AF2011'
 	ModifierPerkList(0)=class'KFPerk_Gunslinger'
 }
