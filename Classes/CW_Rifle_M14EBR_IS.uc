@@ -50,6 +50,8 @@ DefaultProperties
 	
 	// Content
 	FirstPersonMeshName="CustomM14Package.FPP_Model.WEP_1stP_M14_EBR"
+	PickupMeshName="CustomM14Package.TPP_Model.Wep_M14EBR_Pickup"
+	AttachmentArchetypeName="CustomM14Package.TPP_Model.Wep_M14EBR_3P"
 	
 	// Zooming/Position
 	PlayerViewOffset=(X=15.0,Y=11.5,Z=-2)
