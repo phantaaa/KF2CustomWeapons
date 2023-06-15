@@ -23,7 +23,6 @@ static function string GetItemCategory()
 static function string GetItemDescription()
 {
 	return "*Damage 25 -> 33" $
-	"\n*RPM 660 -> 700" $
 	"\n*Recoil:" $
 	"\n*Pitch: Lower" $
 	"\n*Yaw: Slightly lower";
@@ -33,7 +32,7 @@ DefaultProperties
 {
 	WeaponClassPath="CustomWeapons.CW_AssaultRifle_Bullpup"
 	
-	BuyPrice=500
+	BuyPrice=600
 	AmmoPricePerMag=30
 	ImagePath="ui_weaponselect_tex.UI_WeaponSelect_Bullpup"
 	
