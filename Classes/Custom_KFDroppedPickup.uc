@@ -1,5 +1,19 @@
 class Custom_KFDroppedPickup extends KFDroppedPickup;
 
+event Landed(Vector HitNormal, Actor FloorActor)
+{
+	bForceNetUpdate = TRUE;
+	bNetDirty = true;
+	NetUpdateFrequency = 2.f;
+	AddToNavigation();
+}
+
+simulated event FellOutOfWorld(class<DamageType> dmgType)
+{
+	SetLocation(Instigator.Location + vect(0,0,5));
+	SetPhysics(PHYS_Falling);
+}
+
 auto state Pickup
 {
 	function bool ValidTouch(Pawn Other)
