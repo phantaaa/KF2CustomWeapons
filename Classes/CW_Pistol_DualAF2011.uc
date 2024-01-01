@@ -33,6 +33,23 @@ function bool DenyPickupQuery(class<Inventory> ItemClass, Actor Pickup)
 	return class<KFWeapon>(ItemClass).default.PackageKey == self.PackageKey;
 }
 
+function HandleWeaponShotTaken( byte FireMode )
+{
+	if( KFPlayer != None )
+	{
+		if (FireMode == ALTFIRE_FIREMODE || FireMode == DEFAULT_FIREMODE )
+			KFPlayer.AddShotsFired(2);
+		else
+			KFPlayer.AddShotsFired(GetNumProjectilesToFire(FireMode));
+	}
+}
+
+simulated function InstantFireClient()
+{
+	super(KFWeap_DualBase).InstantFireClient();
+	super(KFWeap_DualBase).InstantFireClient();
+}
+
 DefaultProperties
 {
 	DroppedPickupClass=class'Custom_KFDroppedPickup'
@@ -47,9 +64,15 @@ DefaultProperties
 	FirstPersonAnimSetNames(0)="WEP_1P_Dual_AF2001_ANIM_NoPutDownKick.Wep_1stP_Dual_AF2001_Anim" // "wep_1p_dual_af2001_anim.Wep_1stP_Dual_AF2001_Anim"
 	
 	// Ammo
-	MagazineCapacity[0]=32
-	SpareAmmoCapacity[0]=272
 	InitialSpareMags[0]=0
+	
+	// DEFAULT_FIREMODE
+	WeaponFireTypes(DEFAULT_FIREMODE)=EWFT_InstantHit //EWFT_Projectile
+	InstantHitDamageTypes(DEFAULT_FIREMODE)=class'CustomWeapons.Custom_KFDT_Ballistic_AF2011'
+	
+	// ALTFIRE_FIREMODE
+	WeaponFireTypes(ALTFIRE_FIREMODE)=EWFT_InstantHit //EWFT_Projectile
+	InstantHitDamageTypes(ALTFIRE_FIREMODE)=class'CustomWeapons.Custom_KFDT_Ballistic_AF2011'
 	
 	// Recoil
 	maxRecoilPitch=650 // vertical

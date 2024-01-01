@@ -128,6 +128,10 @@ DefaultProperties
 {
 	DroppedPickupClass=class'Custom_KFDroppedPickup'
 	bIsLaserSightEnabled=true
+
+	ScopeLenseMICTemplate=MaterialInstanceConstant'CustomScope.WEP_1P_M14EBR_Scope_MAT'
+	PlayerViewOffset=(X=15.0,Y=11.5,Z=-4)
+	IronSightPosition=(X=6.0,Y=-0.025,Z=-0.03)
 	
 	EquipTime=0.20
 	PutDownTime=0.20
