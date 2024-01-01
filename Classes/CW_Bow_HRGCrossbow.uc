@@ -13,33 +13,26 @@ function bool DenyPickupQuery(class<Inventory> ItemClass, Actor Pickup)
 	return class<KFWeapon>(ItemClass).default.PackageKey == self.PackageKey;
 }
 
-/** Instead of switch fire mode use as immediate alt fire */
 simulated function AltFireMode()
 {
 	if (!Instigator.IsLocallyControlled())
 	{
 		return;
 	}
-
-	// StartFire - StopFire called from KFPlayerInput
 	StartFire(ALTFIRE_FIREMODE);
 }
 
 simulated function StartFire(byte FireModeNum)
 {
-	// Skip KFWeap_Rifle_RailGun::StartFire because of some irrelevant cheat detection there
 	super(KFWeap_ScopedBase).StartFire(FireModeNum);
 }
 
-/*********************************************************************************************
- @name Reload / recharge
-********************************************************************************************* */
-
-/** Healing charge doesn't count as ammo for purposes of inventory management (e.g. switching) */
 simulated function bool HasAnyAmmo()
 {
 	if (HasSpareAmmo() || HasAmmo(DEFAULT_FIREMODE))
+	{
 		return true;
+	}
 
 	return false;
 }

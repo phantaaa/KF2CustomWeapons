@@ -30,8 +30,8 @@ simulated function float GetReloadRateScale()
 
 simulated function InstantFireClient()
 {
-    super(KFWeap_DualBase).InstantFireClient();
-    super(KFWeap_DualBase).InstantFireClient();
+	super(KFWeap_DualBase).InstantFireClient();
+	super(KFWeap_DualBase).InstantFireClient();
 }
 
 function HandleWeaponShotTaken( byte FireMode )

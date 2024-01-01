@@ -23,10 +23,13 @@ simulated function AttachLaserSight()
 
 	// Setup our laser sight on the client
 	if (bIsFromPickup)
+	{
 		bEnabled = bIsLaserSightEnabled;
+	}
 	else
+	{
 		bEnabled = true;
-
+	}
 	SetLaserSightEnabled(bEnabled);
 }
 
@@ -43,7 +46,9 @@ simulated function SetLaserSightEnabled(bool bEnabled, optional bool SendToServe
 			LaserSight.LaserBeamMeshComp.SetHidden(!bIsLaserSightEnabled);
 			LaserSight.LaserDotMeshComp.SetHidden(!bIsLaserSightEnabled);
 			if (Role < ROLE_Authority && SendToServer)
+			{
 				ServerSetLaserSight(bIsLaserSightEnabled);
+			}
 		}
 		else
 		{
@@ -55,7 +60,9 @@ simulated function SetLaserSightEnabled(bool bEnabled, optional bool SendToServe
 simulated function AltFireMode()
 {
 	if (!Instigator.IsLocallyControlled())
+	{
 		return;
+	}
 
 	SetLaserSightEnabled(!bIsLaserSightEnabled);
 
@@ -70,11 +77,16 @@ simulated event Tick(float DeltaTime)
 
 	// Copy/paste modified from KFWeapon
 	if (LaserSight != None && bIsLaserSightEnabled)
+	{
 		LaserSight.Update(DeltaTime, Self);
+	
+	}
 	
 	// Copy/paste modified from KFWeap_ScopedBase
 	if(ScopeLenseMIC == none)
-		return;
+	{
+		return;	
+	}
 
 	if(Instigator != none && Instigator.Controller != none && Instigator.IsHumanControlled())
 	{

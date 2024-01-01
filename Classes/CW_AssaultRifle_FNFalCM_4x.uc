@@ -34,13 +34,13 @@ reliable server function ServerSetAltFire(bool bAltFire)
 
 reliable client function ClientSetAltFire(bool bAltFire)
 {
-    bUseAltFireMode = bAltFire;
+	bUseAltFireMode = bAltFire;
 }
 
 DefaultProperties
 {
 	DroppedPickupClass=class'Custom_KFDroppedPickup'
-    // FOV
+	// FOV
 	MeshFOV=55 //60
 	MeshIronSightFOV=20
 	PlayerIronSightFOV=70
