@@ -1,7 +1,8 @@
 class KFWeapDef_Hemogoblin_NoBleed extends KFWeaponDefinition
     abstract;
 
-static function string GetItemName() {
+static function string GetItemName() 
+{
   return Localize("KFWeap_Rifle_Hemogoblin", "ItemName", "KFGameContent");
 }
 
@@ -28,7 +29,7 @@ static function string GetItemLocalization(string KeyName)
 
 DefaultProperties
 {
-  WeaponClassPath="CustomWeapons.CW_Rifle_Hemogoblin_NoBleed"
+  WeaponClassPath="CustomWeapons.CW_Rifle_Hemogoblin"
 
   BuyPrice=1100
   AmmoPricePerMag=30
