@@ -5,8 +5,6 @@ defaultproperties
 	DroppedPickupClass=class'Custom_KFDroppedPickup'
 
 	// Ammo
-	MagazineCapacity[0]=8
-	SpareAmmoCapacity[0]=136
 	InitialSpareMags[0]=0
 	
 	// Recoil

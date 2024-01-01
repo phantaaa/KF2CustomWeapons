@@ -13,6 +13,10 @@ DefaultProperties
 	HealFullRechargeSeconds=12 // 10
 	HealDartShotWeakZedGrabCooldown=0.5
 
+	// LockOn
+	LockChecktime=0.025 // 0.1
+	LockAcquireTime=0.05 // 0.2  
+
 	DartMaxRecoilPitch=250
 	DartMinRecoilPitch=200
 	DartMaxRecoilYaw=100

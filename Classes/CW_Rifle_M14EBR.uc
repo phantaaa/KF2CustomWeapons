@@ -129,7 +129,6 @@ DefaultProperties
 	maxRecoilPitch=225
 	minRecoilPitch=225 // 200
 
-
 	// DEFAULT_FIREMODE
 	InstantHitDamage(DEFAULT_FIREMODE)=90.0 //80
 	

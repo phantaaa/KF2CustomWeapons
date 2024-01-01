@@ -10,7 +10,7 @@ function bool DenyPickupQuery(class<Inventory> ItemClass, Actor Pickup)
 function SetOriginalValuesFromPickup(KFWeapon PickedUpWeapon)
 {
 	super.SetOriginalValuesFromPickup(PickedUpWeapon);
-	ClientSetAltFire(CW_AssaultRifle_Bullpup(PickedUpWeapon).bIsAltFire); // this is server value
+	ClientSetAltFire(CW_AssaultRifle_Bullpup(PickedUpWeapon).bIsAltFire);
 }
 
 simulated function AltFireMode()
@@ -45,8 +45,8 @@ DefaultProperties
 
 	// DEFAULT_FIREMODE
 	FireInterval(DEFAULT_FIREMODE)= 0.08571 //700   // +0.0909  660 RPM
-	Spread(DEFAULT_FIREMODE)=0.0065
 	InstantHitDamage(DEFAULT_FIREMODE)=33.0 // vanilla -25// 30
+	Spread(DEFAULT_FIREMODE)=0.0065
 
 	// ALT_FIREMODE
 	FireInterval(ALTFIRE_FIREMODE)= 0.08571 

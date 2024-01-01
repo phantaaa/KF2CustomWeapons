@@ -10,7 +10,7 @@ function bool DenyPickupQuery(class<Inventory> ItemClass, Actor Pickup)
 function SetOriginalValuesFromPickup(KFWeapon PickedUpWeapon)
 {
 	super.SetOriginalValuesFromPickup(PickedUpWeapon);
-	ClientSetAltFire(CW_AssaultRifle_MKB42(PickedUpWeapon).bIsAltFire); // this is server value
+	ClientSetAltFire(CW_AssaultRifle_MKB42(PickedUpWeapon).bIsAltFire);
 }
 
 simulated function AltFireMode()
