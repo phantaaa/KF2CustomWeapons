@@ -28,27 +28,6 @@ simulated function float GetReloadRateScale()
 	return Super.GetReloadRateScale() * 0.8f; // TAC RELOAD
 }
 
-simulated function InstantFireClient()
-{
-	super(KFWeap_DualBase).InstantFireClient();
-	super(KFWeap_DualBase).InstantFireClient();
-}
-
-function HandleWeaponShotTaken( byte FireMode )
-{
-	if( KFPlayer != None )
-	{
-		if (FireMode == ALTFIRE_FIREMODE || FireMode == DEFAULT_FIREMODE )
-		{
-			KFPlayer.AddShotsFired(2);
-		}
-		else
-		{
-			KFPlayer.AddShotsFired(GetNumProjectilesToFire(FireMode));
-		}
-	}
-}
-
 function bool DenyPickupQuery(class<Inventory> ItemClass, Actor Pickup)
 {
 	return class<KFWeapon>(ItemClass).default.PackageKey == self.PackageKey;
@@ -77,14 +56,6 @@ DefaultProperties
 	minRecoilPitch=650
 	maxRecoilYaw=225 // horizontal
 	minRecoilYaw=-225
-	
-	// DEFAULT_FIREMODE
-	WeaponFireTypes(DEFAULT_FIREMODE)= EWFT_InstantHit //EWFT_Projectile
-	InstantHitDamageTypes(DEFAULT_FIREMODE)=class'CustomWeapons.Custom_KFDT_Ballistic_AF2011'
-	
-	// ALTFIRE_FIREMODE
-	WeaponFireTypes(ALTFIRE_FIREMODE)=EWFT_InstantHit //EWFT_Projectile
-	InstantHitDamageTypes(ALTFIRE_FIREMODE)=class'CustomWeapons.Custom_KFDT_Ballistic_AF2011'
 	
 	WeaponUpgrades.Empty
 }
