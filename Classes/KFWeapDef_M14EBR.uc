@@ -8,21 +8,21 @@ static function string GetItemName()
 
 static function string GetItemDescription()
 {
-    return "*Damage: 80 -> 90";
+  return "*Damage: 80 -> 90";
 }
 
 static function string GetItemLocalization(string KeyName)
 {
-    if(KeyName == "ItemName")
-    {
-        return GetItemName();
-    }
-    return Localize("KFWeap_Rifle_M14EBR", KeyName, "KFGameContent");
+  if(KeyName == "ItemName")
+  {
+    return GetItemName();
+  }
+  return Localize("KFWeap_Rifle_M14EBR", KeyName, "KFGameContent");
 }
 
 static function string GetItemCategory()
 {
-    return Localize("KFWeap_Rifle_M14EBR", "ItemCategory", "KFGameContent");
+  return Localize("KFWeap_Rifle_M14EBR", "ItemCategory", "KFGameContent");
 }
 
 DefaultProperties

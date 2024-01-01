@@ -3,30 +3,30 @@ class KFWeapDef_Bullpup extends KFWeaponDefinition
 
 static function string GetItemName()
 {
-    return Localize("KFWeap_AssaultRifle_Bullpup", "ItemName", "KFGameContent");
+  return Localize("KFWeap_AssaultRifle_Bullpup", "ItemName", "KFGameContent");
 }
 
 static function string GetItemLocalization(string KeyName)
 {
-    if(KeyName == "ItemName")
-    {
-        return GetItemName();
-    }
-    return Localize("KFWeap_AssaultRifle_Bullpup", KeyName, "KFGameContent");  
+  if(KeyName == "ItemName")
+  {
+    return GetItemName();
+  }
+  return Localize("KFWeap_AssaultRifle_Bullpup", KeyName, "KFGameContent");  
 }
 
 static function string GetItemCategory()
 {
-    return Localize("KFWeap_AssaultRifle_Bullpup", "ItemCategory", "KFGameContent");   
+  return Localize("KFWeap_AssaultRifle_Bullpup", "ItemCategory", "KFGameContent");   
 }
 
 static function string GetItemDescription()
 {
-     return "*Damage 25 -> 33" $
-    "\n*RPM 660 -> 700" $
-    "\n*Recoil:" $
-    "\n*Pitch: Lower" $
-    "\n*Yaw: Slightly lower";
+  return "*Damage 25 -> 33" $
+          "\n*RPM 660 -> 700" $
+          "\n*Recoil:" $
+          "\n*Pitch: Lower" $
+          "\n*Yaw: Slightly lower";
 }
 
 DefaultProperties

@@ -5,7 +5,7 @@ class Custom_KFDT_Ballistic_SW500 extends KFDT_Ballistic_Handgun
 /** Allows the damage type to customize exactly which hit zones it can dismember */
 static simulated function bool CanDismemberHitZone( name InHitZoneName )
 {
-    switch ( InHitZoneName )
+	switch ( InHitZoneName )
 	{
 		case 'lupperarm':
 		case 'rupperarm':
@@ -15,7 +15,7 @@ static simulated function bool CanDismemberHitZone( name InHitZoneName )
 		case 'rcalf':
 		case 'lthigh':
 		case 'rthigh':
-	 		return true;
+		return true;
 	}
 
 	return false;
@@ -29,7 +29,7 @@ DefaultProperties
 	KDeathUpKick=-700
 	KDeathVel=350
 
-   	KnockdownPower=25
+	KnockdownPower=25
 	StumblePower=50 //60
 	GunHitPower=200
 

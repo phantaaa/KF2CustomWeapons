@@ -19,9 +19,9 @@ defaultproperties
 	FireSightedAnims[1]=Shoot_Iron2
 	FireSightedAnims[2]=Shoot_Iron3
 
-    // FOV
+	// FOV
 	MeshIronSightFOV=52
-    PlayerIronSightFOV=70
+	PlayerIronSightFOV=70
 
 	// Depth of field
 	DOF_FG_FocalRadius=75

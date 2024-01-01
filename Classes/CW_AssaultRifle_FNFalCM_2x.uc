@@ -23,8 +23,8 @@ function SetOriginalValuesFromPickup(KFWeapon PickedUpWeapon)
 
 simulated function AltFireMode()
 {
-    super.AltFireMode();
-    ServerSetAltFire(bUseAltFireMode);
+  super.AltFireMode();
+  ServerSetAltFire(bUseAltFireMode);
 }
 
 reliable server function ServerSetAltFire(bool bAltFire)
@@ -34,13 +34,13 @@ reliable server function ServerSetAltFire(bool bAltFire)
 
 reliable client function ClientSetAltFire(bool bAltFire)
 {
-    bUseAltFireMode = bAltFire;
+  bUseAltFireMode = bAltFire;
 }
 
 DefaultProperties
 {
 	DroppedPickupClass=class'Custom_KFDroppedPickup'
-    // FOV
+	// FOV
 	MeshFOV=55 //60
 	MeshIronSightFOV=20
 	PlayerIronSightFOV=70
@@ -67,10 +67,10 @@ DefaultProperties
 	InstantHitDamageTypes(DEFAULT_FIREMODE)=class'Custom_KFDT_Ballistic_FNFal' //fal
 	FireInterval(DEFAULT_FIREMODE)=+0.0857 //700 RPM
 	InstantHitDamage(DEFAULT_FIREMODE)=60.0 //62
-    FireModeIconPaths(DEFAULT_FIREMODE)=Texture2D'ui_firemodes_tex.UI_FireModeSelect_BulletAuto'
-    FiringStatesArray(DEFAULT_FIREMODE)=WeaponFiring
-    WeaponFireTypes(DEFAULT_FIREMODE)=EWFT_InstantHit
-    Spread(DEFAULT_FIREMODE)=0.007
+	FireModeIconPaths(DEFAULT_FIREMODE)=Texture2D'ui_firemodes_tex.UI_FireModeSelect_BulletAuto'
+	FiringStatesArray(DEFAULT_FIREMODE)=WeaponFiring
+	WeaponFireTypes(DEFAULT_FIREMODE)=EWFT_InstantHit
+	Spread(DEFAULT_FIREMODE)=0.007
 
 	// ALTFIRE_FIREMODE
 	WeaponProjectiles(ALTFIRE_FIREMODE)=class'KFProj_Bullet_AssaultRifle'
@@ -87,26 +87,7 @@ DefaultProperties
 	bCanBeReloaded=true
 	bReloadFromMagazine=true
 
-
 	// Recoil
-//	maxRecoilPitch=175
-//	minRecoilPitch=175 //140
-//	maxRecoilYaw=165
-//	minRecoilYaw=-145
-//	RecoilRate=0.09
-//	RecoilViewRotationScale=0.6
-//	HippedRecoilModifier=1.5
-//
-//	RecoilMaxYawLimit=500
-//	RecoilMinYawLimit=65035
-//	RecoilMaxPitchLimit=900
-//	RecoilMinPitchLimit=65035
-//	RecoilISMaxYawLimit=150
-//	RecoilISMinYawLimit=65385
-//	RecoilISMaxPitchLimit=375
-//	RecoilISMinPitchLimit=65460
-
-    // Recoil
 	maxRecoilPitch=175
 	minRecoilPitch=175 // 125
 	maxRecoilYaw=165

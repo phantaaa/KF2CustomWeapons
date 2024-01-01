@@ -3,26 +3,26 @@ class KFWeapDef_Remington1858Dual extends KFWeaponDefinition
 
 static function string GetItemName()
 {
-    return Localize("KFWeap_Revolver_DualRem1858", "ItemName", "KFGameContent");
+  return Localize("KFWeap_Revolver_DualRem1858", "ItemName", "KFGameContent");
 }
 
 static function string GetItemLocalization(string KeyName)
 {
-    if(KeyName == "ItemName")
-    {
-        return GetItemName();
-    }
-    return Localize("KFWeap_Revolver_DualRem1858", KeyName, "KFGameContent");  
+  if(KeyName == "ItemName")
+  {
+    return GetItemName();
+  }
+  return Localize("KFWeap_Revolver_DualRem1858", KeyName, "KFGameContent");  
 }
 
 static function string GetItemCategory()
 {
-    return Localize("KFWeap_Revolver_DualRem1858", "ItemCategory", "KFGameContent");   
+  return Localize("KFWeap_Revolver_DualRem1858", "ItemCategory", "KFGameContent");   
 }
 
 static function string GetItemDescription()
 {
-    return Localize("KFWeap_Revolver_DualRem1858", "ItemDescription", "KFGameContent");
+  return Localize("KFWeap_Revolver_DualRem1858", "ItemDescription", "KFGameContent");
 }
 
 DefaultProperties

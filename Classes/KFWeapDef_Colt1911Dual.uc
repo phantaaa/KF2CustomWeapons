@@ -3,26 +3,26 @@ class KFWeapDef_Colt1911Dual extends KFWeaponDefinition
 
 static function string GetItemName()
 {
-    return Localize("KFWeap_Pistol_DualColt1911", "ItemName", "KFGameContent");
+  return Localize("KFWeap_Pistol_DualColt1911", "ItemName", "KFGameContent");
 }
 
 static function string GetItemLocalization(string KeyName)
 {
-    if(KeyName == "ItemName")
-    {
-        return GetItemName();
-    }
-    return Localize("KFWeap_Pistol_DualColt1911", KeyName, "KFGameContent");  
+  if(KeyName == "ItemName")
+  {
+    return GetItemName();
+  }
+  return Localize("KFWeap_Pistol_DualColt1911", KeyName, "KFGameContent");  
 }
 
 static function string GetItemCategory()
 {
-    return Localize("KFWeap_Pistol_DualColt1911", "ItemCategory", "KFGameContent");   
+  return Localize("KFWeap_Pistol_DualColt1911", "ItemCategory", "KFGameContent");   
 }
 
 static function string GetItemDescription()
 {
-    return Localize("KFWeap_Pistol_DualColt1911", "ItemDescription", "KFGameContent");
+  return Localize("KFWeap_Pistol_DualColt1911", "ItemDescription", "KFGameContent");
 }
 
 DefaultProperties

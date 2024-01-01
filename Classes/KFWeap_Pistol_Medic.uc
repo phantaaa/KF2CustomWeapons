@@ -25,7 +25,7 @@ defaultproperties
 	DroppedPickupClass=class'Custom_KFDroppedPickup'
 
 	// Healing charge
-    HealAmount=15
+	HealAmount=15
 
 	// Inventory
 	InventoryGroup=IG_Secondary
@@ -43,10 +43,10 @@ defaultproperties
 	FireSightedAnims[1]=Shoot_Iron2
 	FireSightedAnims[2]=Shoot_Iron3
 
-    // FOV
+	// FOV
 	MeshFOV=86
 	MeshIronSightFOV=77
-    PlayerIronSightFOV=77
+	PlayerIronSightFOV=77
 
 	// Depth of field
 	DOF_FG_FocalRadius=40
@@ -72,8 +72,8 @@ defaultproperties
 	LockAcquiredSoundFirstPerson=AkEvent'WW_WEP_SA_MedicDart.Play_WEP_SA_Medic_Alert_Locked_1P'
 	LockLostSoundFirstPerson=AkEvent'WW_WEP_SA_MedicDart.Play_WEP_SA_Medic_Alert_Lost_1P'
 	LockTargetingSoundFirstPerson=AkEvent'WW_WEP_SA_MedicDart.Play_WEP_SA_Medic_Alert_Locking_1P'
-    HealImpactSoundPlayEvent=AkEvent'WW_WEP_SA_MedicDart.Play_WEP_SA_Medic_Dart_Heal'
-    HurtImpactSoundPlayEvent=AkEvent'WW_WEP_SA_MedicDart.Play_WEP_SA_Medic_Dart_Hurt'
+	HealImpactSoundPlayEvent=AkEvent'WW_WEP_SA_MedicDart.Play_WEP_SA_Medic_Dart_Heal'
+	HurtImpactSoundPlayEvent=AkEvent'WW_WEP_SA_MedicDart.Play_WEP_SA_Medic_Dart_Hurt'
 	OpticsUIClass=class'KFGFxWorld_MedicOptics'
 	HealingDartWaveForm=ForceFeedbackWaveform'FX_ForceFeedback_ARCH.Gunfire.Default_Recoil'
 
@@ -132,4 +132,3 @@ defaultproperties
 
 	WeaponUpgrades.Empty
 }
-

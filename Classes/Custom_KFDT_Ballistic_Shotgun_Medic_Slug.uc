@@ -2,7 +2,6 @@ class Custom_KFDT_Ballistic_Shotgun_Medic_Slug extends KFDT_Ballistic_Shotgun
 	abstract
 	hidedropdown;
 
-/** Allows the damage type to customize exactly which hit zones it can dismember */
 static simulated function bool CanDismemberHitZone( name InHitZoneName )
 {
 	if( super.CanDismemberHitZone( InHitZoneName ) )
@@ -16,7 +15,7 @@ static simulated function bool CanDismemberHitZone( name InHitZoneName )
 		case 'rupperarm':
 		case 'chest':
 		case 'heart':
-	 		return true;
+		return true;
 	}
 
 	return false;
@@ -28,10 +27,10 @@ static function ApplySecondaryDamage( KFPawn Victim, int DamageTaken, optional C
 	local class<KFDamageType> ToxicDT;
 
 	ToxicDT = class'KFDT_Ballistic_Assault_Medic'.static.GetMedicToxicDmgType( DamageTaken, InstigatedBy );
-  	if ( ToxicDT != None )
-    {
-        Victim.ApplyDamageOverTime(DamageTaken, InstigatedBy, ToxicDT);
-    }
+	if ( ToxicDT != None )
+	{
+		Victim.ApplyDamageOverTime(DamageTaken, InstigatedBy, ToxicDT);
+	}
 }
 
 DefaultProperties
@@ -44,12 +43,10 @@ DefaultProperties
 	KDeathVel=350
 
 	StunPower=8
-    KnockdownPower=0
+	KnockdownPower=0
 	StumblePower=20 //13
 	GunHitPower=45 // 45
 
 	WeaponDef=class'KFWeapDef_MedicShotgun_Slug'
-
-	//Perk
 	ModifierPerkList(0)=class'KFPerk_FieldMedic'
 }

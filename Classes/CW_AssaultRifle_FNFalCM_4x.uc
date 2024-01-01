@@ -50,14 +50,14 @@ DefaultProperties
 	DOF_FG_FocalRadius=0//70
 	DOF_FG_MaxNearBlurSize=0//3.5
 
-    // 2D scene capture
-    Begin Object Name=SceneCapture2DComponent0
-        TextureTarget=TextureRenderTarget2D'Wep_Mat_Lib.WEP_ScopeLense_Target'
-        FieldOfView=12.5 // "2.0X" = 25.0(our real world FOV determinant)/2.0
-    End Object
+	// 2D scene capture
+	Begin Object Name=SceneCapture2DComponent0
+		TextureTarget=TextureRenderTarget2D'Wep_Mat_Lib.WEP_ScopeLense_Target'
+		FieldOfView=12.5
+	End Object
 
-    ScopedSensitivityMod = 8.0
-    ScopeLenseMICTemplate =MaterialInstanceConstant'CustomScope.WEP_1P_FNFAL_Scope_MAT'
+	ScopedSensitivityMod = 8.0
+	ScopeLenseMICTemplate =MaterialInstanceConstant'CustomScope.WEP_1P_FNFAL_Scope_MAT'
 
 	// Zooming/Position
 	PlayerViewOffset=(X=22.0,Y=11,Z=-3.0) //(X=22.0,Y=11,Z=-3.0)
@@ -76,10 +76,10 @@ DefaultProperties
 	InstantHitDamageTypes(DEFAULT_FIREMODE)=class'Custom_KFDT_Ballistic_FNFal' //fal
 	FireInterval(DEFAULT_FIREMODE)=+0.0857 //700 RPM
 	InstantHitDamage(DEFAULT_FIREMODE)=60.0 //62
-    FireModeIconPaths(DEFAULT_FIREMODE)=Texture2D'ui_firemodes_tex.UI_FireModeSelect_BulletAuto'
-    FiringStatesArray(DEFAULT_FIREMODE)=WeaponFiring
-    WeaponFireTypes(DEFAULT_FIREMODE)=EWFT_InstantHit
-    Spread(DEFAULT_FIREMODE)=0.007
+	FireModeIconPaths(DEFAULT_FIREMODE)=Texture2D'ui_firemodes_tex.UI_FireModeSelect_BulletAuto'
+	FiringStatesArray(DEFAULT_FIREMODE)=WeaponFiring
+	WeaponFireTypes(DEFAULT_FIREMODE)=EWFT_InstantHit
+	Spread(DEFAULT_FIREMODE)=0.007
 
 	// ALTFIRE_FIREMODE
 	WeaponProjectiles(ALTFIRE_FIREMODE)=class'KFProj_Bullet_AssaultRifle'

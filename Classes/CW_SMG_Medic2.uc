@@ -2,8 +2,8 @@ class CW_SMG_Medic2 extends CW_SMG_Medic;
 
 simulated function AltFireMode()
 {
-    SpawnMedDart();
-    SetTimer(FireInterval[ALTFIRE_FIREMODE],false,nameof(SpawnMedDart));
+	SpawnMedDart();
+	SetTimer(FireInterval[ALTFIRE_FIREMODE],false,nameof(SpawnMedDart));
 }
 
 simulated function SpawnMedDart()

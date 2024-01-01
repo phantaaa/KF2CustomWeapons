@@ -47,32 +47,34 @@ simulated function bool HasAnyAmmo()
 DefaultProperties
 {
 	DroppedPickupClass=class'Custom_KFDroppedPickup'
+
 	// Inventory
 	InventorySize=6 //7
 	GroupPriority=50
 	WeaponSelectTexture=Texture2D'WEP_UI_Crossbow_TEX.UI_WeaponSelect_Crossbow'
 	SecondaryAmmoTexture=Texture2D'UI_SecondaryAmmo_TEX.MedicDarts'
+
    //Perk
 	AssociatedPerkClasses.Empty
 	AssociatedPerkClasses(0)=class'KFPerk_FieldMedic'
 
-    // FOV / Position
-    MeshFOV=70
+	// FOV / Position
+	MeshFOV=70
 	MeshIronSightFOV=52
-    PlayerIronSightFOV=70
+	PlayerIronSightFOV=70
 	PlayerViewOffset=(X=1,Y=8,Z=-5)
 	IronSightPosition=(X=-8,Y=0,Z=0) // -13
 
 	// AI warning system
 	bWarnAIWhenAiming=true
-    MaxAIWarningDistSQ=4000000
+	MaxAIWarningDistSQ=4000000
 	AimWarningDelay=(X=0.4f, Y=0.8f)
 	AimWarningCooldown=0.0f
 
     // 2D scene capture
 	Begin Object Name=SceneCapture2DComponent0
-	   TextureTarget=TextureRenderTarget2D'Wep_Mat_Lib.WEP_ScopeLense_Target'
-	   FieldOfView=18.5 // "2.0X" = 37(our real world FOV determinant)/2.0
+		TextureTarget=TextureRenderTarget2D'Wep_Mat_Lib.WEP_ScopeLense_Target'
+		FieldOfView=18.5 // "2.0X" = 37(our real world FOV determinant)/2.0
 	End Object
 
 	ScopedSensitivityMod=12.0

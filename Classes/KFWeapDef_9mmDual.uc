@@ -3,26 +3,26 @@ class KFWeapDef_9mmDual extends KFWeaponDefinition
 
 static function string GetItemName()
 {
-    return Localize("KFWeap_Pistol_Dual9mm", "ItemName", "KFGameContent");
+  return Localize("KFWeap_Pistol_Dual9mm", "ItemName", "KFGameContent");
 }
 
 static function string GetItemLocalization(string KeyName)
 {
-    if(KeyName == "ItemName")
-    {
-        return GetItemName();
-    }
-    return Localize("KFWeap_Pistol_Dual9mm", KeyName, "KFGameContent");
+  if(KeyName == "ItemName")
+  {
+      return GetItemName();
+  }
+  return Localize("KFWeap_Pistol_Dual9mm", KeyName, "KFGameContent");
 }
 
 static function string GetItemCategory()
 {
-    return Localize("KFWeap_Pistol_Dual9mm", "ItemCategory", "KFGameContent");
+  return Localize("KFWeap_Pistol_Dual9mm", "ItemCategory", "KFGameContent");
 }
 
 static function string GetItemDescription()
 {
-    return Localize("KFWeap_Pistol_Dual9mm", "ItemDescription", "KFGameContent");
+  return Localize("KFWeap_Pistol_Dual9mm", "ItemDescription", "KFGameContent");
 }
 
 DefaultProperties

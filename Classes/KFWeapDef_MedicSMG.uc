@@ -1,29 +1,28 @@
-
 class KFWeapDef_MedicSMG extends KFWeaponDefinition
 	abstract;
 
 static function string GetItemName()
 {
-    return Localize("KFWeap_SMG_Medic", "ItemName", "KFGameContent");
+  return Localize("KFWeap_SMG_Medic", "ItemName", "KFGameContent");
 }
 
 static function string GetItemLocalization(string KeyName)
 {
-    if(KeyName == "ItemName")
-    {
-        return GetItemName();
-    }
-    return Localize("KFWeap_SMG_Medic", KeyName, "KFGameContent");  
+  if(KeyName == "ItemName")
+  {
+    return GetItemName();
+  }
+  return Localize("KFWeap_SMG_Medic", KeyName, "KFGameContent");  
 }
 
 static function string GetItemCategory()
 {
-    return Localize("KFWeap_SMG_Medic", "ItemCategory", "KFGameContent");   
+  return Localize("KFWeap_SMG_Medic", "ItemCategory", "KFGameContent");   
 }
 
 static function string GetItemDescription()
 {
-    return Localize("KFWeap_SMG_Medic", "ItemDescription", "KFGameContent");
+  return Localize("KFWeap_SMG_Medic", "ItemDescription", "KFGameContent");
 }
 
 DefaultProperties
