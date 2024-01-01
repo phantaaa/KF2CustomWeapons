@@ -6,7 +6,7 @@ simulated function float GetReloadRateScale()
 	{
 		return Super.GetReloadRateScale() * 1.20f; //1.1
 	}
-
+	
 	return Super.GetReloadRateScale() * 0.80f; //0.75
 }
 
@@ -19,7 +19,7 @@ DefaultProperties
 {
 	DroppedPickupClass=class'Custom_KFDroppedPickup'
 	SingleClass=class'CustomWeapons.CW_Pistol_Deagle'
-
+	
 	// Ammo
 	InitialSpareMags[0]=0
 	

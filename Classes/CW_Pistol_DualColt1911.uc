@@ -5,17 +5,17 @@ function bool DenyPickupQuery(class<Inventory> ItemClass, Actor Pickup)
 	return class<KFWeapon>(ItemClass).default.PackageKey == self.PackageKey;
 }
 
-defaultproperties
+DefaultProperties
 {
 	DroppedPickupClass=class'Custom_KFDroppedPickup'
 	SingleClass=class'CustomWeapons.CW_Pistol_Colt1911'
-
+	
 	// Ammo
 	InitialSpareMags[0]=0
-
+	
 	// Recoil
 	maxRecoilPitch=450
 	minRecoilPitch=450
-
+	
 	WeaponUpgrades.Empty
 }
