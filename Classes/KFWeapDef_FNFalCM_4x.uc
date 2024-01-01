@@ -13,8 +13,8 @@ static function string GetItemDescription()
 	"\n*Penetration: 2.0 -> 1.0" $
 	"\n*RPM 606 -> 700" $
 	"\n*SpareAmmo: 160 -> 280" $
-	"\n*VerticalRecoil: 165-200 -> 175-175" $
-	"\n*HorizontalRecoil: -165 to 190 -> -145 to 165";
+	"\n*VerticalRecoil: 165-200 -> 165-165" $
+	"\n*HorizontalRecoil: -165 to 190 -> -125 to 145";
 }
 
 static function string GetItemLocalization(string KeyName)

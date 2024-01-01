@@ -64,7 +64,7 @@ DefaultProperties
 	PlayerViewOffset=(X=22.0,Y=11,Z=-3.0) //(X=22.0,Y=11,Z=-3.0)
 	IronSightPosition=(X=15,Y=0,Z=-0.01) //(X=7,Y=0,Z=0)
 
-	PackageKey="FNFAL"
+	PackageKey="FNFAL_SS"
 	FirstPersonMeshName="WEP_1P_FNFAL_MESH.WEP_1stP_FNFAL_Rig"
 	FirstPersonAnimSetNames(0)="WEP_1P_FNFAL_ANIM.Wep_1stP_FNFAL_Anim"
 	PickupMeshName="WEP_3P_FNFAL_MESH.WEP_3rdP_FNFAL_Pickup"
@@ -91,9 +91,9 @@ DefaultProperties
 	WeaponSelectTexture=Texture2D'WEP_UI_FNFAL_TEX.UI_WeaponSelect_FNFAL'
 	
 	// Recoil
-	maxRecoilPitch=240 // 300
-	minRecoilPitch=240 // 300
-	maxRecoilYaw=150 // 150
+	maxRecoilPitch=230 // 300
+	minRecoilPitch=230 // 300
+	maxRecoilYaw=140 // 150
 	minRecoilYaw=0
 	RecoilRate=0.09
 	RecoilMaxYawLimit=500

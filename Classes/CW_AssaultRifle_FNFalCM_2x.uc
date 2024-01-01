@@ -88,10 +88,10 @@ DefaultProperties
 	bReloadFromMagazine=true
 	
 	// Recoil
-	maxRecoilPitch=175
-	minRecoilPitch=175 // 125
-	maxRecoilYaw=165
-	minRecoilYaw=-145
+	maxRecoilPitch=165
+	minRecoilPitch=165 // 125
+	maxRecoilYaw=145
+	minRecoilYaw=-125
 	RecoilRate=0.09
 	RecoilMaxYawLimit=500
 	RecoilMinYawLimit=65035
@@ -101,7 +101,7 @@ DefaultProperties
 	RecoilISMinYawLimit=65460
 	RecoilISMaxPitchLimit=375
 	RecoilISMinPitchLimit=65460
-	IronSightMeshFOVCompensationScale=4.0
+	IronSightMeshFOVCompensationScale=4.5
 	
 	// Shooting Animations
 	FireSightedAnims[0]=Shoot_Iron
@@ -109,7 +109,7 @@ DefaultProperties
 	FireSightedAnims[2]=Shoot_Iron3
 	
 	// Content
-	PackageKey="FNFAL"
+	PackageKey="FNFAL_CM"
 	FirstPersonMeshName="FNFAL_CM_MESH_2x.WEP_1stP_FNFAL_Rig"
 	FirstPersonAnimSetNames(0)="WEP_1P_FNFAL_ANIM.Wep_1stP_FNFAL_Anim"
 	PickupMeshName="WEP_3P_FNFAL_MESH.WEP_3rdP_FNFAL_Pickup"

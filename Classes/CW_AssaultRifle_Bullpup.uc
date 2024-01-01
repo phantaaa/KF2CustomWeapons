@@ -44,12 +44,10 @@ DefaultProperties
 	RecoilRate=0.070 // 0.085
 	
 	// DEFAULT_FIREMODE
-	FireInterval(DEFAULT_FIREMODE)= 0.08571 //700 // +0.0909 660 RPM
 	InstantHitDamage(DEFAULT_FIREMODE)=33.0 // vanilla -25// 30
 	Spread(DEFAULT_FIREMODE)=0.0065
 	
 	// ALT_FIREMODE
-	FireInterval(ALTFIRE_FIREMODE)= 0.08571
 	InstantHitDamage(ALTFIRE_FIREMODE)=33.0 //25
 	Spread(ALTFIRE_FIREMODE)=0.0065
 	

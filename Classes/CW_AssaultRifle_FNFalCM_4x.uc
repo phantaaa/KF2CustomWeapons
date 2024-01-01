@@ -97,10 +97,10 @@ DefaultProperties
 	bReloadFromMagazine=true
 	
 	// Recoil
-	maxRecoilPitch=175
-	minRecoilPitch=175 //140
-	maxRecoilYaw=165
-	minRecoilYaw=-145
+	maxRecoilPitch=165
+	minRecoilPitch=165 // 125
+	maxRecoilYaw=145
+	minRecoilYaw=-125
 	RecoilRate=0.09
 	RecoilViewRotationScale=0.6
 	HippedRecoilModifier=1.5
@@ -119,7 +119,7 @@ DefaultProperties
 	FireSightedAnims[2]=Shoot_Iron3
 	
 	// Content
-	PackageKey="FNFAL"
+	PackageKey="FNFAL_CM"
 	FirstPersonMeshName="WEP_1P_FNFAL_MESH.WEP_1stP_FNFAL_Rig"
 	FirstPersonAnimSetNames(0)="WEP_1P_FNFAL_ANIM.Wep_1stP_FNFAL_Anim"
 	PickupMeshName="WEP_3P_FNFAL_MESH.WEP_3rdP_FNFAL_Pickup"

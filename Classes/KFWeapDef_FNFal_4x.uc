@@ -11,7 +11,7 @@ static function string GetItemDescription()
 	return "*FireRate: 606 -> 496rpm (757 to 620 with marksman)" $
 	"\n*Damage: 70 -> 75" $
 	"\n*ReloadSpeed: 110%" $
-	"\n*HorizontalRecoil:-165 to 190 -> -0 to 150 (only pulls to the right)" $
+	"\n*HorizontalRecoil:-165 to 190 -> -0 to 140 (only pulls to the right)" $
 	"\n*VerticalRecoil: 165-200 -> 240-240" $
 	"\n*Weight 8kg -> 9kg";
 }
@@ -33,7 +33,7 @@ static function string GetItemCategory()
 DefaultProperties
 {
 	WeaponClassPath="CustomWeapons.CW_AssaultRifle_FNFal_4x"
-	BuyPrice=1250
+	BuyPrice=1200
 	AmmoPricePerMag=47
 	ImagePath="WEP_UI_FNFAL_TEX.UI_WeaponSelect_FNFAL"
 	EffectiveRange=70
