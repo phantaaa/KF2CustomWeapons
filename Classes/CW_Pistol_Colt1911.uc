@@ -2,7 +2,8 @@ class CW_Pistol_Colt1911 extends KFWeap_Pistol_Colt1911;
 
 DefaultProperties
 {
-	DroppedPickupClass=class'Custom_KFDroppedPickup'
+	// CW pickup class override
+	DroppedPickupClass=class'CW_DroppedPickup'
 	
 	// Ammo
 	InitialSpareMags[0]=0

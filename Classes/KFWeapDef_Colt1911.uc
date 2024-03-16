@@ -1,5 +1,4 @@
-class KFWeapDef_Colt1911 extends KFWeaponDefinition
-abstract;
+class KFWeapDef_Colt1911 extends KFWeaponDefinition abstract;
 
 static function string GetItemName()
 {
@@ -28,10 +27,10 @@ static function string GetItemDescription()
 DefaultProperties
 {
 	WeaponClassPath="CustomWeapons.CW_Pistol_Colt1911"
+	ImagePath="WEP_UI_M1911_TEX.UI_WeaponSelect_M1911Colt"
 	
 	BuyPrice=325 // 325
 	AmmoPricePerMag=13
-	ImagePath="WEP_UI_M1911_TEX.UI_WeaponSelect_M1911Colt"
 	
 	EffectiveRange=50
 }

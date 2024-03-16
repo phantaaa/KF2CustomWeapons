@@ -1,5 +1,4 @@
-class KFWeapDef_AK12 extends KFWeaponDefinition
-abstract;
+class KFWeapDef_AK12 extends KFWeaponDefinition abstract;
 
 static function string GetItemName()
 {
@@ -29,10 +28,10 @@ static function string GetItemDescription()
 DefaultProperties
 {
 	WeaponClassPath="CustomWeapons.CW_AssaultRifle_AK12"
-	
+	ImagePath="ui_weaponselect_tex.UI_WeaponSelect_AK12"
+
 	BuyPrice=1750
 	AmmoPricePerMag=40
-	ImagePath="ui_weaponselect_tex.UI_WeaponSelect_AK12"
-	
+
 	EffectiveRange=67
 }

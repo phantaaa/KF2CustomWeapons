@@ -1,18 +1,16 @@
 class SkinsAdder extends ReplicationInfo dependson(CustomWeaponsMutator);
 
-struct SkinReplacement
+struct native SkinReplacement
 {
 	var class<KFWeaponDefinition> CustomWeapDef;
 	var class<KFWeapon> DefaultWeapon;
-}
-;
+};
 
 var private array<SkinReplacement> ReplacementArray;
 
 simulated event PostBeginPlay()
 {
 	super.PostBeginPlay();
-	
 	if(WorldInfo.NetMode != NM_DedicatedServer) // Server doesn't need skins
 	{
 		ReplaceSkins();
@@ -22,12 +20,10 @@ simulated event PostBeginPlay()
 private reliable client function ReplaceSkins()
 {
 	local SkinReplacement SR;
-	
 	foreach ReplacementArray(SR)
 	{
 		class'KFGame.KFWeaponSkinList'.static.SaveWeaponSkin(SR.CustomWeapDef,SR.DefaultWeapon.default.SkinItemId);
 	}
-	
 	ReplacementArray.length = 0;
 	self.Destroy();
 }
@@ -36,7 +32,7 @@ DefaultProperties
 {
 	RemoteRole=ROLE_SimulatedProxy
 	bAlwaysRelevant=true
-	
+
 	ReplacementArray.Add((CustomWeapDef=class'CustomWeapons.KFWeapDef_M14EBR_IS',DefaultWeapon=class'KFGameContent.KFWeap_Rifle_M14EBR'))
 	ReplacementArray.Add((CustomWeapDef=class'CustomWeapons.KFWeapDef_M14EBR',DefaultWeapon=class'KFGameContent.KFWeap_Rifle_M14EBR'))
 	ReplacementArray.Add((CustomWeapDef=class'CustomWeapons.KFWeapDef_AF2011',DefaultWeapon=class'KFGameContent.KFWeap_Pistol_AF2011'))
@@ -48,7 +44,7 @@ DefaultProperties
 	ReplacementArray.Add((CustomWeapDef=class'CustomWeapons.KFWeapDef_DeagleDual',DefaultWeapon=class'KFGameContent.KFWeap_Pistol_DualDeagle'))
 	ReplacementArray.Add((CustomWeapDef=class'CustomWeapons.KFWeapDef_FNFal_4x',DefaultWeapon=class'KFGameContent.KFWeap_AssaultRifle_FNFal'))
 	ReplacementArray.Add((CustomWeapDef=class'CustomWeapons.KFWeapDef_FNFalCM_2x',DefaultWeapon=class'KFGameContent.KFWeap_AssaultRifle_FNFal'))
-	ReplacementArray.Add((CustomWeapDef=class'CustomWeapons.KFWeapDef_FNFalCM_4x',DefaultWeapon=class'KFGameContent.KFWeap_AssaultRifle_FNFal'))
+	ReplacementArray.Add((CustomWeapDef=class'CustomWeapons.KFWeapDef_FNFalCM_Reflex',DefaultWeapon=class'KFGameContent.KFWeap_AssaultRifle_FNFal'))
 	ReplacementArray.Add((CustomWeapDef=class'CustomWeapons.KFWeapDef_Hemogoblin_NoBleed',DefaultWeapon=class'KFGameContent.KFWeap_Rifle_Hemogoblin'))
 	ReplacementArray.Add((CustomWeapDef=class'CustomWeapons.KFWeapDef_HRGCrossbow',DefaultWeapon=class'KFGameContent.KFWeap_Bow_Crossbow'))
 	ReplacementArray.Add((CustomWeapDef=class'CustomWeapons.KFWeapDef_MedicShotgun_Slug',DefaultWeapon=class'KFGameContent.KFWeap_Shotgun_Medic'))
@@ -65,4 +61,11 @@ DefaultProperties
 	ReplacementArray.Add((CustomWeapDef=class'CustomWeapons.KFWeapDef_Thompson',DefaultWeapon=class'KFGameContent.KFWeap_AssaultRifle_Thompson'))
 	ReplacementArray.Add((CustomWeapDef=class'CustomWeapons.KFWeapDef_Winchester1894',DefaultWeapon=class'KFGameContent.KFWeap_Rifle_Winchester1894'))
 	ReplacementArray.Add((CustomWeapDef=class'CustomWeapons.KFWeapDef_MedicPistol',DefaultWeapon=class'KFGameContent.KFWeap_Pistol_Medic'))
+
+    // Preview weapons
+	ReplacementArray.Add((CustomWeapDef=class'CustomWeapons.Preview_KFWeapDef_M14EBR_IS',DefaultWeapon=class'KFGameContent.KFWeap_Rifle_M14EBR'))
+	ReplacementArray.Add((CustomWeapDef=class'CustomWeapons.Preview_KFWeapDef_M14EBR',DefaultWeapon=class'KFGameContent.KFWeap_Rifle_M14EBR'))
+    ReplacementArray.Add((CustomWeapDef=class'CustomWeapons.Preview_KFWeapDef_CenterfireMB464',DefaultWeapon=class'KFGameContent.KFWeap_Rifle_CenterfireMB464'))
+    ReplacementArray.Add((CustomWeapDef=class'CustomWeapons.Preview_KFWeapDef_FNFal_4x',DefaultWeapon=class'KFGameContent.KFWeap_AssaultRifle_FNFal'))
+
 }

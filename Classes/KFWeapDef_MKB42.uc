@@ -1,5 +1,4 @@
-class KFWeapDef_MKB42 extends KFWeaponDefinition
-abstract;
+class KFWeapDef_MKB42 extends KFWeaponDefinition abstract;
 
 static function string GetItemName()
 {
@@ -34,8 +33,10 @@ static function string GetItemDescription()
 DefaultProperties
 {
 	WeaponClassPath="CustomWeapons.CW_AssaultRifle_MKB42"
+	ImagePath="WEP_UI_MKB42_TEX.UI_WeaponSelect_MKB42"
+
 	BuyPrice=1350
 	AmmoPricePerMag=45 //50
-	ImagePath="WEP_UI_MKB42_TEX.UI_WeaponSelect_MKB42"
+
 	EffectiveRange=67
 }

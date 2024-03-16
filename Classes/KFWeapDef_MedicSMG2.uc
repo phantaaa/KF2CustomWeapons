@@ -1,5 +1,4 @@
-class KFWeapDef_MedicSMG2 extends KFWeaponDefinition
-abstract;
+class KFWeapDef_MedicSMG2 extends KFWeaponDefinition abstract;
 
 static function string GetItemName()
 {
@@ -26,16 +25,16 @@ static function string GetItemDescription()
 	"\n*HealCost: 40 -> 25" $
 	"\n*Inventory slot: Primary -> Secondary" $
 	"\n*Weapon equip time: 0.45 -> 0.20" $
-	"\n*Alt fire will now shoot 2 darts";
+	"\n*Alt fire shoots 2 darts";
 }
 
 DefaultProperties
 {
 	WeaponClassPath="CustomWeapons.CW_SMG_Medic2"
-	
+
 	BuyPrice=650
 	AmmoPricePerMag=21
 	ImagePath="ui_weaponselect_tex.UI_WeaponSelect_MedicSMG"
-	
+
 	EffectiveRange=70
 }

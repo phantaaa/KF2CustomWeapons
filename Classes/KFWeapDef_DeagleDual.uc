@@ -1,5 +1,4 @@
-class KFWeapDef_DeagleDual extends KFWeaponDefinition
-abstract;
+class KFWeapDef_DeagleDual extends KFWeaponDefinition abstract;
 
 static function string GetItemName()
 {
@@ -30,8 +29,10 @@ static function string GetItemCategory()
 DefaultProperties
 {
 	WeaponClassPath="CustomWeapons.CW_Pistol_DualDeagle"
+	ImagePath="WEP_UI_Dual_Deagle_TEX.UI_WeaponSelect_DualDeagle"
+
 	BuyPrice=1100
 	AmmoPricePerMag=42
-	ImagePath="WEP_UI_Dual_Deagle_TEX.UI_WeaponSelect_DualDeagle"
+
 	EffectiveRange=50
 }

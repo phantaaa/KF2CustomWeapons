@@ -41,23 +41,24 @@ function HandleWeaponShotTaken( byte FireMode )
 
 DefaultProperties
 {
-	DroppedPickupClass=class'Custom_KFDroppedPickup'
-	DualClass=class'CustomWeapons.CW_Pistol_DualAF2011'
-	
-	BarrelOffset=(X=4.0,Y=0,Z=0) //10
-	
+	// CW pickup class override
+	DroppedPickupClass=class'CW_DroppedPickup'
+
 	// Ammo
 	InitialSpareMags[0]=0
-	
+
 	// DEFAULT_FIREMODE
 	WeaponFireTypes(DEFAULT_FIREMODE)= EWFT_InstantHit //EWFT_Projectile
 	InstantHitDamageTypes(DEFAULT_FIREMODE)=class'CustomWeapons.Custom_KFDT_Ballistic_AF2011'
-	
+
 	// Recoil
 	maxRecoilPitch=650
 	minRecoilPitch=650
 	maxRecoilYaw=225
 	minRecoilYaw=-225
 
+	// Other
+	BarrelOffset=(X=4.0,Y=0,Z=0) //10
+	DualClass=class'CustomWeapons.CW_Pistol_DualAF2011'
 	WeaponUpgrades.Empty
 }

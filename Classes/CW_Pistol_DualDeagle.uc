@@ -12,13 +12,13 @@ simulated function float GetReloadRateScale()
 
 function bool DenyPickupQuery(class<Inventory> ItemClass, Actor Pickup)
 {
-	return class<KFWeapon>(ItemClass).default.PackageKey == self.PackageKey;
+	return ItemClass == none || ItemClass == SingleClass || class<KFWeapon>(ItemClass).default.PackageKey == self.PackageKey;
 }
 
 DefaultProperties
 {
-	DroppedPickupClass=class'Custom_KFDroppedPickup'
-	SingleClass=class'CustomWeapons.CW_Pistol_Deagle'
+	// CW pickup class override
+	DroppedPickupClass=class'CW_DroppedPickup'
 	
 	// Ammo
 	InitialSpareMags[0]=0
@@ -27,9 +27,11 @@ DefaultProperties
 	maxRecoilPitch=650 // 650
 	minRecoilPitch=650 // 550
 	
-	// DEFAULT_FIREMODE
+	// Fire intervals
 	FireInterval(DEFAULT_FIREMODE)=+0.12 // .11
 	FireInterval(ALTFIRE_FIREMODE)=+0.12 // .11
 	
+	// Other
+	SingleClass=class'CustomWeapons.CW_Pistol_Deagle'
 	WeaponUpgrades.Empty
 }

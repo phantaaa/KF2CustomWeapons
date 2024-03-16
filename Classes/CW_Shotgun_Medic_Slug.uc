@@ -1,10 +1,12 @@
-
 class CW_Shotgun_Medic_Slug extends CW_Shotgun_Medic;
 
 DefaultProperties
 {
+	// Damage 
 	InstantHitDamage(DEFAULT_FIREMODE)=43.0 //25
 	InstantHitDamageTypes(DEFAULT_FIREMODE)=class'Custom_KFDT_Ballistic_Shotgun_Medic_Slug'
+
+	// Fire mode specifics
 	PenetrationPower(DEFAULT_FIREMODE)=8.0
 	FireInterval(DEFAULT_FIREMODE)=0.2 //0.2 300 RPM
 	Spread(DEFAULT_FIREMODE)=0.0

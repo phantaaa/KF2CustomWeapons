@@ -12,12 +12,13 @@ class KFWeap_Revolver_DualRem1858 extends KFWeap_DualBase;
 
 function bool DenyPickupQuery(class<Inventory> ItemClass, Actor Pickup)
 {
-	return ItemClass == SingleClass || ItemClass == self.class;
+	return ItemClass == none || ItemClass == SingleClass || class<KFWeapon>(ItemClass).default.PackageKey == self.PackageKey;
 }
 
 DefaultProperties
 {
-	DroppedPickupClass=class'Custom_KFDroppedPickup'
+	// CW pickup class override
+	DroppedPickupClass=class'CW_DroppedPickup'
 	// Content
 	PackageKey="DualRemington1858"
 	FirstPersonMeshName="WEP_1P_DualRemington1858_MESH.Wep_1stP_DualRemington1858_Rig"

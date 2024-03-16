@@ -1,5 +1,4 @@
-class KFWeapDef_SCAR extends KFWeaponDefinition
-abstract;
+class KFWeapDef_SCAR extends KFWeaponDefinition abstract;
 
 static function string GetItemName()
 {
@@ -28,8 +27,10 @@ static function string GetItemDescription()
 DefaultProperties
 {
 	WeaponClassPath="CustomWeapons.CW_AssaultRifle_SCAR"
+	ImagePath="ui_weaponselect_tex.UI_WeaponSelect_SCAR"
+
 	BuyPrice=2500
 	AmmoPricePerMag=33
-	ImagePath="ui_weaponselect_tex.UI_WeaponSelect_SCAR"
+
 	EffectiveRange=70
 }

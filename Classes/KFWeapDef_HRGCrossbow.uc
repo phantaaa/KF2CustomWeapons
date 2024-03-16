@@ -1,5 +1,4 @@
-class KFWeapDef_HRGCrossbow extends KFWeaponDefinition
-abstract;
+class KFWeapDef_HRGCrossbow extends KFWeaponDefinition abstract;
 
 static function string GetItemName()
 {
@@ -8,7 +7,7 @@ static function string GetItemName()
 
 static function string GetItemDescription()
 {
-	return "*40HP heal per dart(50ammo per dart)" $
+	return "*40HP heal per dart (50 ammo per dart)" $
 	"\n*12 Seconds full dart recharge" $
 	"\n*Dart dmg: 50" $
 	"\n*Dart projectile speed: Instant" $
@@ -27,10 +26,10 @@ static function string GetItemLocalization(string KeyName)
 DefaultProperties
 {
 	WeaponClassPath="CustomWeapons.CW_Bow_HRGCrossbow"
-	
+	ImagePath="WEP_UI_Crossbow_TEX.UI_WeaponSelect_Crossbow"
+
 	BuyPrice=1000
 	AmmoPricePerMag=11
-	ImagePath="WEP_UI_Crossbow_TEX.UI_WeaponSelect_Crossbow"
-	
+
 	EffectiveRange=80
 }

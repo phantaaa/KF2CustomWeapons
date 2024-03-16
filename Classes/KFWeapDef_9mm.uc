@@ -28,10 +28,10 @@ static function string GetItemDescription()
 DefaultProperties
 {
 	WeaponClassPath="KFGameContent.KFWeap_Pistol_9mm"
+	ImagePath="ui_weaponselect_tex.UI_WeaponSelect_9mm"
 	
 	BuyPrice=0
 	AmmoPricePerMag=12 //8
-	ImagePath="ui_weaponselect_tex.UI_WeaponSelect_9mm"
 	
 	EffectiveRange=50
 }

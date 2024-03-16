@@ -12,7 +12,8 @@ class KFWeap_Revolver_Rem1858 extends KFWeap_PistolBase;
 
 DefaultProperties
 {
-	DroppedPickupClass=class'Custom_KFDroppedPickup'
+	// CW pickup class override
+	DroppedPickupClass=class'CW_DroppedPickup'
 	// FOV
 	MeshFOV=60
 	MeshIronSightFOV=55

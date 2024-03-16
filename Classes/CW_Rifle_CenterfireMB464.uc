@@ -9,40 +9,49 @@ simulated function float GetReloadRateScale()
 
 simulated event SetWeapon()
 {
+    local KFPerk_Sharpshooter SharpPerk;
+
 	super.SetWeapon();
-	
-	if(GetPerk().class == class'KFPerk_Sharpshooter')
+
+    SharpPerk = KFPerk_Sharpshooter(GetPerk());
+	if(SharpPerk != none)
 	{
-		EquipTime = 0.25; // 0.45
-		PutDownTime = 0.25; // 0.33
-		MinFiringPutDownPct = 0.60; // 0.80
-		ReloadspeedMod = 0.80;
+		EquipTime = 0.25f; // 0.45
+		PutDownTime = 0.25f; // 0.33
+		MinFiringPutDownPct = 0.60f; // 0.80
+
+        if(!SharpPerk.IsTacticalReloadActive())
+        {
+		    ReloadspeedMod = 0.80f;
+        }
 	}
 }
 
 function bool DenyPickupQuery(class<Inventory> ItemClass, Actor Pickup)
 {
-	return class<KFWeapon>(itemclass).default.PackageKey == self.PackageKey;
+	return ItemClass == none || class<KFWeapon>(ItemClass).default.PackageKey == self.PackageKey;
 }
 
 DefaultProperties
 {
-	DroppedPickupClass=class'Custom_KFDroppedPickup'
-	ReloadspeedMod=1.0;
-	
+	// CW pickup class override
+	DroppedPickupClass=class'CW_DroppedPickup'
+
 	// Inventory / Grouping
 	InventorySize=5
 	GroupPriority=54
-	
+
 	// Ammo
 	InitialSpareMags[0]=0
-	
+
 	// Recoil
 	maxRecoilPitch=500 // 500
 	minRecoilPitch=500 // 400
-	
-	// DEFAULT_FIREMODE
+
+	// Damage
 	InstantHitDamage(DEFAULT_FIREMODE)=180
-	
+
+	// CW pickup class override
+	ReloadspeedMod=1.0;
 	WeaponUpgrades.Empty
 }

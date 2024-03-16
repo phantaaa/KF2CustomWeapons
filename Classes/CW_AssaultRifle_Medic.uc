@@ -1,13 +1,45 @@
 class CW_AssaultRifle_Medic extends KFWeap_AssaultRifle_Medic;
 
+var private Texture2D SecondaryAmmoTextureDisableLockOn;
+var private bool bDisableLockOn;
+
+exec simulated function togglelockon()
+{
+	bDisableLockOn = !bDisableLockOn;
+	ServerToggleLockOn(bDisableLockOn);
+	ClientToggleLockOn(bDisableLockOn);
+}
+
+private unreliable server function ServerToggleLockOn(bool bDisableLockOnParam)
+{
+	bDisableLockOn = bDisableLockOnParam;
+}
+
+private unreliable client function ClientToggleLockOn(bool bDisableLockOnParam)
+{
+	bDisableLockOn = bDisableLockOnParam;
+	Instigator.PlaySoundBase(KFInventoryManager(InvManager).SwitchFireModeEvent);
+	SecondaryAmmoTexture = bDisableLockOnParam ? SecondaryAmmoTextureDisableLockOn : default.SecondaryAmmoTexture;
+	KFPlayerController(Instigator.Controller).MyGFxHUD.PlayerBackpackContainer.RefreshWeapon(self);
+}
+
+function bool AllowTargetLockOn()
+{
+	return !bDisableLockOn && !Instigator.bNoWeaponFiring;
+}
+
 function bool DenyPickupQuery(class<Inventory> ItemClass, Actor Pickup)
 {
-	return class<KFWeapon>(itemclass).default.PackageKey == self.PackageKey;
+	return ItemClass == none || class<KFWeapon>(ItemClass).default.PackageKey == self.PackageKey;
 }
 
 DefaultProperties
 {
-	DroppedPickupClass=class'Custom_KFDroppedPickup'
+	// CW pickup class override
+	DroppedPickupClass=class'CW_DroppedPickup'
+
+	// Disabled Tracking Texture
+	SecondaryAmmoTextureDisableLockOn=Texture2D'Custom_UI_SecondaryAmmo_TEX.MedicDarts'
 	
 	// LockOn
 	LockChecktime=0.025 // 0.1

@@ -1,5 +1,4 @@
-class KFWeapDef_Bullpup extends KFWeaponDefinition
-abstract;
+class KFWeapDef_Bullpup extends KFWeaponDefinition abstract;
 
 static function string GetItemName()
 {
@@ -31,10 +30,10 @@ static function string GetItemDescription()
 DefaultProperties
 {
 	WeaponClassPath="CustomWeapons.CW_AssaultRifle_Bullpup"
+	ImagePath="ui_weaponselect_tex.UI_WeaponSelect_Bullpup"
 	
 	BuyPrice=600
 	AmmoPricePerMag=30
-	ImagePath="ui_weaponselect_tex.UI_WeaponSelect_Bullpup"
 	
 	EffectiveRange=68
 }

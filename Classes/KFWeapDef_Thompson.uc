@@ -1,5 +1,4 @@
-class KFWeapDef_Thompson extends KFWeaponDefinition
-abstract;
+class KFWeapDef_Thompson extends KFWeaponDefinition abstract;
 
 static function string GetItemName()
 {
@@ -29,10 +28,10 @@ static function string GetItemDescription()
 DefaultProperties
 {
 	WeaponClassPath="CustomWeapons.CW_AssaultRifle_Thompson"
-	
+	ImagePath="WEP_UI_TommyGun_TEX.UI_WeaponSelect_TommyGun"
+
 	BuyPrice=800 //650
 	AmmoPricePerMag=50
-	ImagePath="WEP_UI_TommyGun_TEX.UI_WeaponSelect_TommyGun"
-	
+
 	EffectiveRange=50
 }

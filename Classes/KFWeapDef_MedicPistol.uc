@@ -1,5 +1,4 @@
-class KFWeapDef_MedicPistol extends KFWeaponDefinition
-abstract;
+class KFWeapDef_MedicPistol extends KFWeaponDefinition abstract;
 
 static function string GetItemName()
 {
@@ -28,10 +27,10 @@ static function string GetItemDescription()
 DefaultProperties
 {
 	WeaponClassPath="CustomWeapons.KFWeap_Pistol_Medic"
+	ImagePath="ui_weaponselect_tex.UI_WeaponSelect_MedicPistol"
 	
 	BuyPrice=200
 	AmmoPricePerMag=10
-	ImagePath="ui_weaponselect_tex.UI_WeaponSelect_MedicPistol"
 	
 	EffectiveRange=50
 }

@@ -1,6 +1,4 @@
-class Custom_KFDT_Bleeding_Hemogoblin extends KFDT_Toxic
-abstract
-hidedropdown;
+class Custom_KFDT_Bleeding_Hemogoblin extends KFDT_Toxic abstract;
 
 DefaultProperties
 {

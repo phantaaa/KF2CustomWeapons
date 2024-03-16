@@ -1,5 +1,4 @@
-class KFWeapDef_MedicSMG extends KFWeaponDefinition
-abstract;
+class KFWeapDef_MedicSMG extends KFWeaponDefinition abstract;
 
 static function string GetItemName()
 {

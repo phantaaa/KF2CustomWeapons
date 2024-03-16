@@ -1,4 +1,6 @@
-class Custom_KFDroppedPickup extends KFDroppedPickup;
+class CW_DroppedPickup extends KFDroppedPickup;
+
+var private const LinearColor LowAmmoPickupColor;
 
 event Landed(Vector HitNormal, Actor FloorActor)
 {
@@ -10,7 +12,7 @@ event Landed(Vector HitNormal, Actor FloorActor)
 
 simulated event FellOutOfWorld(class<DamageType> dmgType)
 {
-	SetLocation(Instigator.Location + vect(0,0,5));
+	SetLocation(Instigator.Location + vect(0,0.5,5));
 	SetPhysics(PHYS_Falling);
 }
 
@@ -98,4 +100,37 @@ auto state Pickup
 			Touch( P, None, Location, vect(0,0,1) );
 		}
 	}
+} 
+
+simulated function SetPickupMesh(PrimitiveComponent NewPickupMesh)
+{
+	super.SetPickupMesh(NewPickupMesh);
+
+	if (Role == ROLE_Authority) 
+	{
+		if (KFWeapon(Inventory).GetAmmoPercentage() < 0.25 && KFWeapon(Inventory).HasAnyAmmo())
+		{
+			SetLowAmmoMaterial();
+		}
+	}
+}
+
+simulated function SetLowAmmoMaterial()
+{
+    local MaterialInstanceConstant MeshMIC;
+
+    if (MyMeshComp != none)
+    {
+        MeshMIC = MyMeshComp.CreateAndSetMaterialInstanceConstant(0);
+        if (MeshMIC != none)
+        {
+            MeshMIC.SetVectorParameterValue('GlowColor', LowAmmoPickupColor);
+        }
+    }
+}
+
+defaultproperties
+{
+	bUseLowHealthDelay=false
+	LowAmmoPickupColor=(R=1.0000000,G=0.9700000,B=0.3600000,A=1.0000000)
 }

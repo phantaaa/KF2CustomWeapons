@@ -4,7 +4,7 @@ var bool bIsLaserSightEnabled, bIsFromPickup;
 
 simulated event SetWeapon()
 {
-	if(!class'CustomWeaponsMutator'.static.RemovedDuplicateWeapon(Inventory,self))
+	if(!class'Utils'.static.CheckAndRemoveDuplicatedWeapon(Inventory,self))
 	{
 		super.SetWeapon();
 	}
@@ -12,15 +12,15 @@ simulated event SetWeapon()
 
 function bool DenyPickupQuery(class<Inventory> ItemClass, Actor Pickup)
 {
-	return class<KFWeapon>(ItemClass).default.PackageKey == self.PackageKey;
+	return ItemClass == none || class<KFWeapon>(ItemClass).default.PackageKey == self.PackageKey;
 }
 
 simulated function AttachLaserSight()
 {
 	local bool bEnabled;
-	
+
 	super.AttachLaserSight();
-	
+
 	// Setup our laser sight on the client
 	if (bIsFromPickup)
 	{
@@ -36,7 +36,6 @@ simulated function AttachLaserSight()
 simulated function SetLaserSightEnabled(bool bEnabled, optional bool SendToServer = true)
 {
 	bIsLaserSightEnabled = bEnabled;
-	
 	if (WorldInfo.NetMode != NM_DedicatedServer)
 	{
 		if (LaserSight != None)
@@ -63,9 +62,9 @@ simulated function AltFireMode()
 	{
 		return;
 	}
-	
+
 	SetLaserSightEnabled(!bIsLaserSightEnabled);
-	
+
 	// Play switch fire mode sound for audio confirmation
 	Instigator.PlaySoundBase(KFInventoryManager(InvManager).SwitchFireModeEvent);
 }
@@ -74,20 +73,19 @@ simulated event Tick(float DeltaTime)
 {
 	local float InterpValue;
 	local float DefaultZoomInTime;
-	
+
 	// Copy/paste modified from KFWeapon
 	if (LaserSight != None && bIsLaserSightEnabled)
 	{
 		LaserSight.Update(DeltaTime, Self);
-		
 	}
-	
+
 	// Copy/paste modified from KFWeap_ScopedBase
 	if(ScopeLenseMIC == none)
 	{
 		return;
 	}
-	
+
 	if(Instigator != none && Instigator.Controller != none && Instigator.IsHumanControlled())
 	{
 		if(bZoomingOut)
@@ -126,27 +124,33 @@ function SetOriginalValuesFromPickup(KFWeapon PickedUpWeapon)
 
 DefaultProperties
 {
-	DroppedPickupClass=class'Custom_KFDroppedPickup'
-	bIsLaserSightEnabled=true
+	// CW pickup class override
+	DroppedPickupClass=class'CW_DroppedPickup'
 
+	// Lens override
 	ScopeLenseMICTemplate=MaterialInstanceConstant'CustomScope.WEP_1P_M14EBR_Scope_MAT'
+
+	// Offsets/Positioning
 	PlayerViewOffset=(X=15.0,Y=11.5,Z=-4)
 	IronSightPosition=(X=6.0,Y=-0.025,Z=-0.03)
-	
-	EquipTime=0.20
-	PutDownTime=0.20
-	
+
 	// Ammo
 	InitialSpareMags[0]=0
 	bCanBeReloaded=true
 	bReloadFromMagazine=true
-	
+
+	// Inventory handling
+	EquipTime=0.20
+	PutDownTime=0.20
+
 	// Recoil
 	maxRecoilPitch=225
 	minRecoilPitch=225 // 200
-	
-	// DEFAULT_FIREMODE
+
+	// Damage
 	InstantHitDamage(DEFAULT_FIREMODE)=90.0 //80
-	
+
+	// Other
+	bIsLaserSightEnabled=true
 	WeaponUpgrades.Empty
 }

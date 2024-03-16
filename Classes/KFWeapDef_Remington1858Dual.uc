@@ -1,5 +1,4 @@
-class KFWeapDef_Remington1858Dual extends KFWeaponDefinition
-abstract;
+class KFWeapDef_Remington1858Dual extends KFWeaponDefinition abstract;
 
 static function string GetItemName()
 {
@@ -28,10 +27,10 @@ static function string GetItemDescription()
 DefaultProperties
 {
 	WeaponClassPath="CustomWeapons.KFWeap_Revolver_DualRem1858"
+	ImagePath="WEP_UI_DualRemington1858_TEX.UI_WeaponSelect_DualRemington"
 	
 	BuyPrice=200
 	AmmoPricePerMag=20 //12
-	ImagePath="WEP_UI_DualRemington1858_TEX.UI_WeaponSelect_DualRemington"
 	
 	EffectiveRange=50
 }

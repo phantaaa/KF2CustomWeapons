@@ -1,6 +1,4 @@
-class Custom_KFDT_Ballistic_SW500 extends KFDT_Ballistic_Handgun
-abstract
-hidedropdown;
+class Custom_KFDT_Ballistic_SW500 extends KFDT_Ballistic_Handgun abstract;
 
 /** Allows the damage type to customize exactly which hit zones it can dismember */
 static simulated function bool CanDismemberHitZone( name InHitZoneName )

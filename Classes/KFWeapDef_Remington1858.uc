@@ -1,5 +1,4 @@
-class KFWeapDef_Remington1858 extends KFWeaponDefinition
-abstract;
+class KFWeapDef_Remington1858 extends KFWeaponDefinition abstract;
 
 static function string GetItemName()
 {
@@ -28,10 +27,10 @@ static function string GetItemDescription()
 DefaultProperties
 {
 	WeaponClassPath="CustomWeapons.KFWeap_Revolver_Rem1858"
+	ImagePath="WEP_UI_Remington_1858_TEX.UI_WeaponSelect_Remington"
 	
 	BuyPrice=100
 	AmmoPricePerMag=10 //6
-	ImagePath="WEP_UI_Remington_1858_TEX.UI_WeaponSelect_Remington"
 	
 	EffectiveRange=50
 }

@@ -2,7 +2,7 @@ class CW_Bow_HRGCrossbow extends KFWeap_ScopedBase;
 
 simulated event SetWeapon()
 {
-	if(!class'CustomWeaponsMutator'.static.RemovedDuplicateWeapon(Inventory,self))
+	if(!class'Utils'.static.CheckAndRemoveDuplicatedWeapon(Inventory,self))
 	{
 		super.SetWeapon();
 	}
@@ -10,7 +10,7 @@ simulated event SetWeapon()
 
 function bool DenyPickupQuery(class<Inventory> ItemClass, Actor Pickup)
 {
-	return class<KFWeapon>(ItemClass).default.PackageKey == self.PackageKey;
+	return ItemClass == none || class<KFWeapon>(ItemClass).default.PackageKey == self.PackageKey;
 }
 
 simulated function AltFireMode()
@@ -39,7 +39,8 @@ simulated function bool HasAnyAmmo()
 
 DefaultProperties
 {
-	DroppedPickupClass=class'Custom_KFDroppedPickup'
+	// CW pickup class override
+	DroppedPickupClass=class'CW_DroppedPickup'
 	
 	// Inventory
 	InventorySize=6 //7

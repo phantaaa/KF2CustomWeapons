@@ -27,9 +27,11 @@ static function string GetItemDescription()
 
 DefaultProperties
 {
-	WeaponClassPath = "CustomWeapons.CW_Pistol_AF2011"
-	BuyPrice =850 //750
+	WeaponClassPath="CustomWeapons.CW_Pistol_AF2011"
+	ImagePath="WEP_UI_AF2001_TEX.UI_WeaponSelect_AF2011"
+
+	BuyPrice=850 //750
 	AmmoPricePerMag=24
-	ImagePath = "WEP_UI_AF2001_TEX.UI_WeaponSelect_AF2011"
-	EffectiveRange = 50
+
+	EffectiveRange=50
 }

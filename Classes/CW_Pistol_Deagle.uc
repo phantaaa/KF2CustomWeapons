@@ -2,7 +2,8 @@ class CW_Pistol_Deagle extends KFWeap_Pistol_Deagle;
 
 DefaultProperties
 {
-	DroppedPickupClass=class'Custom_KFDroppedPickup'
+	// CW pickup class override
+	DroppedPickupClass=class'CW_DroppedPickup'
 	
 	// Ammo
 	InitialSpareMags[0]=0

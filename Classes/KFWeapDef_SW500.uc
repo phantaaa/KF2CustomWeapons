@@ -1,5 +1,4 @@
-class KFWeapDef_SW500 extends KFWeaponDefinition
-abstract;
+class KFWeapDef_SW500 extends KFWeaponDefinition abstract;
 
 static function string GetItemName()
 {
@@ -28,10 +27,10 @@ static function string GetItemDescription()
 DefaultProperties
 {
 	WeaponClassPath="CustomWeapons.CW_Revolver_SW500"
+	ImagePath="WEP_UI_SW_500_TEX.UI_WeaponSelect_SW500"
 	
 	BuyPrice=850
 	AmmoPricePerMag=25
-	ImagePath="WEP_UI_SW_500_TEX.UI_WeaponSelect_SW500"
 	
 	EffectiveRange=50
 }

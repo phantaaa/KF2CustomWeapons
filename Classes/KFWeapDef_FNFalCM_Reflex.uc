@@ -1,17 +1,17 @@
-class KFWeapDef_FNFalCM_4x extends KFWeaponDefinition
-abstract;
+class KFWeapDef_FNFalCM_Reflex extends KFWeaponDefinition abstract;
 
 static function string GetItemName()
 {
-	return "FN FAL CM - ACOG";
+	return "FN FAL (Reflex)";
 }
 
 static function string GetItemDescription()
 {
 	return "*Damage: 70 -> 60" $
-	"\n*Bullet type:FN_FAL -> SCAR" $
+	"\n*Bullet type: FN_FAL -> SCAR" $
+    "\n*Scope: x4 ACOG -> Reflex" $
 	"\n*Penetration: 2.0 -> 1.0" $
-	"\n*RPM 606 -> 700" $
+	"\n*RPM: 606 -> 700" $
 	"\n*SpareAmmo: 160 -> 280" $
 	"\n*VerticalRecoil: 165-200 -> 165-165" $
 	"\n*HorizontalRecoil: -165 to 190 -> -125 to 145";
@@ -33,9 +33,11 @@ static function string GetItemCategory()
 
 DefaultProperties
 {
-	WeaponClassPath="CustomWeapons.CW_AssaultRifle_FNFalCM_4x"
+	WeaponClassPath="CustomWeapons.CW_AssaultRifle_FNFalCM_Reflex"
+	ImagePath="WEP_UI_FalCM_TEX.UI_WeaponSelect_FNFAL_CM"
+
 	BuyPrice=2500
 	AmmoPricePerMag=47
-	ImagePath="WEP_UI_FNFAL_TEX.UI_WeaponSelect_FNFAL"
+
 	EffectiveRange=70
 }

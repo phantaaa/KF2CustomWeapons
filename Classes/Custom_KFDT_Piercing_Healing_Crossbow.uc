@@ -1,6 +1,4 @@
-class Custom_KFDT_Piercing_Healing_Crossbow extends KFDT_Piercing
-abstract
-hidedropdown;
+class Custom_KFDT_Piercing_Healing_Crossbow extends KFDT_Piercing abstract;
 
 DefaultProperties
 {

@@ -1,5 +1,4 @@
-class KFWeapDef_MedicRifle extends KFWeaponDefinition
-abstract;
+class KFWeapDef_MedicRifle extends KFWeaponDefinition abstract;
 
 static function string GetItemName()
 {
@@ -28,10 +27,10 @@ static function string GetItemDescription()
 DefaultProperties
 {
 	WeaponClassPath="CustomWeapons.CW_AssaultRifle_Medic"
+	ImagePath="ui_weaponselect_tex.UI_WeaponSelect_MedicAssault"
 	
 	BuyPrice=1500
 	AmmoPricePerMag=40
-	ImagePath="ui_weaponselect_tex.UI_WeaponSelect_MedicAssault"
 	
 	EffectiveRange=70
 }

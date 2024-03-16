@@ -1,5 +1,4 @@
-class KFWeapDef_Hemogoblin_NoBleed extends KFWeaponDefinition
-abstract;
+class KFWeapDef_Hemogoblin_NoBleed extends KFWeaponDefinition abstract;
 
 static function string GetItemName()
 {
@@ -30,10 +29,10 @@ static function string GetItemLocalization(string KeyName)
 DefaultProperties
 {
 	WeaponClassPath="CustomWeapons.CW_Rifle_Hemogoblin"
+	ImagePath="WEP_UI_Bleeder_TEX.UI_WeaponSelect_Bleeder"
 	
 	BuyPrice=1100
 	AmmoPricePerMag=30
-	ImagePath="WEP_UI_Bleeder_TEX.UI_WeaponSelect_Bleeder"
 	
 	EffectiveRange=90
 }

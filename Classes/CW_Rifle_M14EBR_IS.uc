@@ -41,8 +41,6 @@ simulated event Tick(float DeltaTime)
 
 DefaultProperties
 {
-	ScopedSensitivityMod=15.00 //12.500000
-	
 	// FOV
 	MeshFOV=65
 	MeshIronSightFOV=27
@@ -56,4 +54,7 @@ DefaultProperties
 	// Zooming/Position
 	PlayerViewOffset=(X=15.0,Y=11.5,Z=-2)
 	IronSightPosition=(X=5.0,Y=0,Z=3.75)
+
+	// Other
+	ScopedSensitivityMod=15.00 //12.500000
 }

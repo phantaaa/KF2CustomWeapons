@@ -1,6 +1,4 @@
-class Custom_KFDT_Ballistic_AF2011 extends KFDT_Ballistic_Handgun
-abstract
-hidedropdown;
+class Custom_KFDT_Ballistic_AF2011 extends KFDT_Ballistic_Handgun abstract;
 
 static simulated function bool CanDismemberHitZone( name InHitZoneName )
 {

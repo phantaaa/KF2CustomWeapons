@@ -1,5 +1,4 @@
-class KFWeapDef_Winchester1894 extends KFWeaponDefinition
-abstract;
+class KFWeapDef_Winchester1894 extends KFWeaponDefinition abstract;
 
 static function string GetItemName()
 {
@@ -28,10 +27,10 @@ static function string GetItemDescription()
 DefaultProperties
 {
 	WeaponClassPath="CustomWeapons.KFWeap_Rifle_Winchester1894"
+	ImagePath="wep_ui_winchester_tex.UI_WeaponSelect_Winchester"
 	
 	BuyPrice=200
 	AmmoPricePerMag=32 //30
-	ImagePath="wep_ui_winchester_tex.UI_WeaponSelect_Winchester"
 	
 	EffectiveRange=70
 }

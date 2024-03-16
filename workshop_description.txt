@@ -1,37 +1,42 @@
-# CustomWeapons ([Workshop page](https://steamcommunity.com/sharedfiles/filedetails/?id=1937095339))
+[h1]CustomWeapons[/h1]
 
-Weapon library mainly for [Controlled Difficulty](https://steamcommunity.com/sharedfiles/filedetails/?id=2052571175) purposes containing gun fixes/balance changes, also including few new weapons. This has to be used with [Custom Trader Inventory](https://steamcommunity.com/sharedfiles/filedetails/?id=2830826239). Every weapon has labeled changes in game trader description. All weapons have removed upgrades.
+Weapon library mainly for [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2052571175]Controlled Difficulty[/url] purposes containing gun fixes/balance changes, also including few new weapons. This has to be used with [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2830826239]Custom Trader Inventory[/url]. Every weapon has labeled changes in game trader description. All weapons have removed upgrades.
 
-## Server Setup
+[h2]Weapon changes[/h2]
+https://docs.google.com/spreadsheets/d/11ZmX_vSpSw9XvN_3jTNL2my6wz1EXyHJ9PR-2Bec5MQ
+
+[h2]Server Setup[/h2]
 Add to KFEngine.ini:
-```ini
+[code]
 [OnlineSubsystemSteamworks.KFWorkshopSteamworks]
 ServerSubscribedWorkshopItems=1937095339
-```
+[/code]
 
-## Important
+[h2]Important[/h2]
 To see skins you have to add mutator which comes with this package:
-```
+[code]
 ?mutator=CustomWeapons.CustomWeaponsMutator
-```
+[/code]
 
-## FN FAL CM (Reflex)
-
-### Option 1:
-Add [FN FAL (Reflex) workshop item](https://steamcommunity.com/sharedfiles/filedetails/?id=3270321697) id to the `KFEngine.ini` on the server and add the dummy mutator:
-```ini
+[h2]FN FAL CM (Reflex)[/h2]
+[b]Option 1:[/b]
+Add [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3270321697]FN FAL (Reflex) workshop item[/url] id to the KFEngine.ini and add the dummy mutator:
+[code]
 [OnlineSubsystemSteamworks.KFWorkshopSteamworks]
 ServerSubscribedWorkshopItems=3270321697 
-```
+[/code]
 Launch parameters:
-`?Mutator=CustomWeapons.CustomWeaponsMutator,FNFalCM.FNFalCMMut`  
+[code]
+?Mutator=CustomWeapons.CustomWeaponsMutator,FNFalCM.FNFalCMMut
+[/code]
 This way everyone who joins the server will download the required weapon files automatically.
 
-### Option 2:
-Ensure that everyone has subscribed to the [FN FAL (Reflex) workshop item](https://steamcommunity.com/sharedfiles/filedetails/?id=3270321697).
+[b]Option 2:[/b]
+Ensure that everyone has subscribed to the [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3270321697]FN FAL (Reflex) workshop item[/url].
 
-## CTI Configuration
-```ini
+[h2]CTI Configuration[/h2]
+Add to CTI.ini:
+[code]
 [CTI.CTI]
 Version=5
 LogLevel=LL_Error
@@ -82,10 +87,11 @@ Item=CustomWeapons.KFWeapDef_Remington1858Dual
 Item=CustomWeapons.KFWeapDef_Winchester1894
 Item=CustomWeapons.KFWeapDef_MedicPistol
 Item=CustomWeapons.KFWeapDef_AR15
-```
+[/code]
 
-## TIM Configuration
-```ini
+[h2]TIM Configuration[/h2]
+Add to TIM.ini:
+[code]
 [TIM.TIMut]
 bDebugLog=false
 bAddNewWeaponsToConfig=True
@@ -127,14 +133,17 @@ iVersion=8
 [TIM.TIMRepLink]
 bDebugLog=false
 iRetries=1
-```
+[/code]
 
-## Preview Weapons
-Those weapons are in preview state, and are an attempt to address recoil reduction caused by playing Sharpshooter on FPS higher than 120. [Thanks to courtesy of Carl who spend his time and effort researching this issue.](https://www.zsdr.org/index.php/2024/06/29/quantifying-the-kf2-recoil-rate-of-fire-reloads-on-fps-dependency/). You can play with this weapons with any FPS, try it out and report back if u have any feedback.
+[h2]Preview Weapons[/h2]
+Those weapons are in preview state, and are an attempt to address recoil reduction caused by playing Sharpshooter on FPS higher than 120. [url=https://www.zsdr.org/index.php/2024/06/29/quantifying-the-kf2-recoil-rate-of-fire-reloads-on-fps-dependency/]Thanks to courtesy of Carl who spend his time and effort researching this issue.[/url]
 
-```ini
+[code]
 Preview_KFWeapDef_M14EBR
 Preview_KFWeapDef_M14EBR_IS
 Preview_KFWeapDef_FNFal_4x
 Preview_KFWeapDef_CenterfireMB464
-```
+[/code]
+
+[h2]Source code[/h2]
+https://github.com/phantaaa/KF2CustomWeapons

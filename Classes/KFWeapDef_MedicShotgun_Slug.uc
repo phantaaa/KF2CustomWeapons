@@ -1,5 +1,4 @@
-class KFWeapDef_MedicShotgun_Slug extends KFWeaponDefinition
-abstract;
+class KFWeapDef_MedicShotgun_Slug extends KFWeaponDefinition abstract;
 
 static function string GetItemName()
 {
@@ -27,10 +26,10 @@ static function string GetItemLocalization(string KeyName)
 DefaultProperties
 {
 	WeaponClassPath="CustomWeapons.CW_Shotgun_Medic_Slug"
+	ImagePath="ui_weaponselect_tex.UI_WeaponSelect_MedicShotgun"
 	
 	BuyPrice=1100
 	AmmoPricePerMag=40
-	ImagePath="ui_weaponselect_tex.UI_WeaponSelect_MedicShotgun"
 	
 	EffectiveRange=80
 }

@@ -22,18 +22,20 @@ static function string GetItemCategory()
 
 static function string GetItemDescription()
 {
-	return "*Empty reload speed: 1.00 -> 1.30 (30\% \slower)" $
+	return "*Empty reload speed: 1.00 -> 1.35 (35\% \slower)" $
 	"\n*Tac reload speed: 1.00 -> 0.8 (20\% faster)" $
 	"\n*KnockdownPower: 15 -> 0" $
-	"\n*VerticalRecoil: 550-650 -> 650-650 (min-max)" $
-	"\n*HorizontalRecoil: -550 to 500 -> -225 to 225 (left to right)";
+	"\n*VerticalRecoil: 550-650 -> 650-650 (min - max)" $
+	"\n*HorizontalRecoil: -550 to 500 -> -225 to 225 (left - right)";
 }
 
 DefaultProperties
 {
 	WeaponClassPath="CustomWeapons.CW_Pistol_DualAF2011"
+	ImagePath="WEP_UI_AF2001_TEX.UI_WeaponSelect_DualAF2011"
+
 	BuyPrice=1700 // 1500
 	AmmoPricePerMag=48
-	ImagePath="WEP_UI_AF2001_TEX.UI_WeaponSelect_DualAF2011"
+
 	EffectiveRange=50
 }
