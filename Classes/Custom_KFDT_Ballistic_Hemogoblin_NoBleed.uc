@@ -76,7 +76,7 @@ static function ApplySecondaryDamage( KFPawn Victim, int DamageTaken, optional C
 	local class<KFDamageType> ToxicDT;
 	local KFPawn_Monster KFM;
 	
-	ToxicDT = class'KFDT_Ballistic_Assault_Medic'.static.GetMedicToxicDmgType( DamageTaken, InstigatedBy );
+	ToxicDT = class'KFDT_Dart_Toxic'.static.GetMedicToxicDmgType( DamageTaken, InstigatedBy );
 	if ( ToxicDT != None )
 	{
 		Victim.ApplyDamageOverTime(DamageTaken, InstigatedBy, ToxicDT);
@@ -86,10 +86,10 @@ static function ApplySecondaryDamage( KFPawn Victim, int DamageTaken, optional C
 	if (default.BleedDamageType.default.DoT_Type != DOT_None)
 	{
 		KFM = KFPawn_Monster(Victim);
-		
 		iF(KFM == none)
-		return;
-		
+		{
+			return;
+		}
 		KFM.ApplyDamageOverTime(DamageTaken, InstigatedBy, class'Custom_KFDT_Bleeding_Hemogoblin');
 		KFM.AdjustMovementSpeed(0.8);
 	}

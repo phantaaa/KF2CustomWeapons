@@ -8,7 +8,7 @@ simulated event PostBeginPlay()
 	SkinsAdder = Spawn(class'SkinsAdder');
 }
 
-simulated static final function bool RemovedDuplicateWeapon(Inventory CurrentWeapon, KFWeapon NewWeapon)
+simulated static final function bool CheckAndRemoveDuplicatedWeapon(Inventory CurrentWeapon, KFWeapon NewWeapon)
 {
 	if(KFWeapon(CurrentWeapon).PackageKey == NewWeapon.PackageKey)
 	{

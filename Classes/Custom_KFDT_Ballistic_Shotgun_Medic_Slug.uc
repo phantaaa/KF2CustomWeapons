@@ -25,8 +25,7 @@ static simulated function bool CanDismemberHitZone( name InHitZoneName )
 static function ApplySecondaryDamage( KFPawn Victim, int DamageTaken, optional Controller InstigatedBy )
 {
 	local class<KFDamageType> ToxicDT;
-	
-	ToxicDT = class'KFDT_Ballistic_Assault_Medic'.static.GetMedicToxicDmgType( DamageTaken, InstigatedBy );
+	ToxicDT = class'KFDT_Dart_Toxic'.static.GetMedicToxicDmgType( DamageTaken, InstigatedBy );
 	if ( ToxicDT != None )
 	{
 		Victim.ApplyDamageOverTime(DamageTaken, InstigatedBy, ToxicDT);

@@ -2,7 +2,7 @@ class CW_Bow_HRGCrossbow extends KFWeap_ScopedBase;
 
 simulated event SetWeapon()
 {
-	if(!class'CustomWeaponsMutator'.static.RemovedDuplicateWeapon(Inventory,self))
+	if(!class'CustomWeaponsMutator'.static.CheckAndRemoveDuplicatedWeapon(Inventory,self))
 	{
 		super.SetWeapon();
 	}

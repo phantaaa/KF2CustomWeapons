@@ -4,15 +4,13 @@ struct SkinReplacement
 {
 	var class<KFWeaponDefinition> CustomWeapDef;
 	var class<KFWeapon> DefaultWeapon;
-}
-;
+};
 
 var private array<SkinReplacement> ReplacementArray;
 
 simulated event PostBeginPlay()
 {
 	super.PostBeginPlay();
-	
 	if(WorldInfo.NetMode != NM_DedicatedServer) // Server doesn't need skins
 	{
 		ReplaceSkins();
@@ -22,12 +20,10 @@ simulated event PostBeginPlay()
 private reliable client function ReplaceSkins()
 {
 	local SkinReplacement SR;
-	
 	foreach ReplacementArray(SR)
 	{
 		class'KFGame.KFWeaponSkinList'.static.SaveWeaponSkin(SR.CustomWeapDef,SR.DefaultWeapon.default.SkinItemId);
 	}
-	
 	ReplacementArray.length = 0;
 	self.Destroy();
 }

@@ -4,7 +4,7 @@ var bool bIsLaserSightEnabled, bIsFromPickup;
 
 simulated event SetWeapon()
 {
-	if(!class'CustomWeaponsMutator'.static.RemovedDuplicateWeapon(Inventory,self))
+	if(!class'CustomWeaponsMutator'.static.CheckAndRemoveDuplicatedWeapon(Inventory,self))
 	{
 		super.SetWeapon();
 	}
