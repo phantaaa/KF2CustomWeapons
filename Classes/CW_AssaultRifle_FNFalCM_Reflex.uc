@@ -1,18 +1,12 @@
 class CW_AssaultRifle_FNFalCM_Reflex extends CW_AssaultRifle_FNFalCM_2x;
 
-var private bool bHasNeededFiles;
-
-public event PostBeginPlay()
-{
-    super.PostBeginPlay();
-    bHasNeededFiles = WeaponSelectTexture != none;
-}
-
 simulated event SetWeapon()
 {
-    if(!bHasNeededFiles)
+    if(WeaponSelectTexture == none)
     {
         Instigator.ClientMessage("This weapon requires external dependency to work properly. Check it on CustomWeapons workshop page");
+        KFInventoryManager(self.InvManager).ServerRemoveFromInventory(self);
+		KFInventoryManager(self.InvManager).ClientRemoveFromInventory(self);
         return;
     }
     super.SetWeapon();
@@ -37,7 +31,7 @@ DefaultProperties
     // Content
 	WeaponSelectTexture=Texture2D'WEP_UI_FalCM_TEX.UI_WeaponSelect_FNFAL_CM'
 	FirstPersonMeshName="WEP_1P_FalCM_MESH.WEP_1stP_FNFAL_CM_Rig"
-	PickupMeshName="WEP_3P_FalCM_MESH.WEP_3rdP_FNFAL_CM_Pickup" // need to fallback if not subscribed
+	PickupMeshName="WEP_3P_FalCM_MESH.WEP_3rdP_FNFAL_CM_Pickup"
 	AttachmentArchetypeName="WEP_FalCM_ARCH.Wep_FNFAL_CM_3P"
 	MuzzleFlashTemplateName="WEP_FalCM_ARCH.Wep_FNFAL_MuzzleFlash" //NEED To REPLACE
 }
